@@ -19,48 +19,80 @@
             <!-- Header -->
             <div class="row">
 
-              <!--Barra de navegación -->
-              <!-- FIXME: Esta columna de 12 se oculta en la parte superior -->
               <div class="col-12">
-                <!-- TODO: Poner una barra de navegación -->
-              </div>
 
-                <!-- Slider -->
-                <!-- FIXME: Imágenes completas para el container-fluid -->
-                <div class="col-12 mt-3">
-                    <div class="carousel slide" id="secundary-carousel" data-ride="carousel">
+                <div class="row">
 
-                        <ol class="carousel-indicators">
-                            <li data-tarjet="#secundary-carousel" data-slide-to="0" class="active"></li>
-                            <li data-tarjet="#secundary-carousel" data-slide-to="1"></li>
-                            <li data-tarjet="#secundary-carousel" data-slide-to="2"></li>
-                        </ol>
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <div class="carousel-caption d-block">
-                                    <h4>Título de la imagen</h4>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, dignissimos.</p>
-                                </div>
-                                <img src="img/carousel1.jpg" alt="">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="img/carousel2.jpg" alt="">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="img/carousel3.jpg" alt="">
-                            </div>
+                  <!--Barra de navegación -->
+                  <!-- FIXME: Esta columna de 12 se oculta en la parte superior -->
+                  <div class="col-12 mt-3">
+                    <ul class="nav nav-tabs">
+                      <li class="nav-item">
+                        <a class="nav-link active" href="#">Active</a>
+                      </li>
+                      <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+                        <div class="dropdown-menu">
+                          <a class="dropdown-item" href="#">Action</a>
+                          <a class="dropdown-item" href="#">Another action</a>
+                          <a class="dropdown-item" href="#">Something else here</a>
+                          <div class="dropdown-divider"></div>
+                          <a class="dropdown-item" href="#">Separated link</a>
                         </div>
-                        <a href="#secundary-carousel" class="carousel-control-prev" data-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="sr-only">Anterior</span>
-                        </a>
-                        <a href="#secundary-carousel" class="carousel-control-next" data-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="sr-only">Siguiente</span>
-                        </a>
-                    </div>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link disabled" href="#">Disabled</a>
+                      </li>
+                    </ul>
+                  </div>
+
                 </div>
 
+                <div class="row justify-content-center">
+
+                  <!-- Slider -->
+                  <div class="col-12 ml-3 mr-3  mt-3">
+
+                      <div class="carousel slide" id="secundary-carousel" data-ride="carousel">
+
+                          <ol class="carousel-indicators">
+                              <li data-tarjet="#secundary-carousel" data-slide-to="0" class="active"></li>
+                              <li data-tarjet="#secundary-carousel" data-slide-to="1"></li>
+                              <li data-tarjet="#secundary-carousel" data-slide-to="2"></li>
+                          </ol>
+                          <div class="carousel-inner">
+                              <div class="carousel-item active">
+                                  <div class="carousel-caption d-block">
+                                      <h4>Título de la imagen</h4>
+                                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, dignissimos.</p>
+                                  </div>
+                                  <img src="img/bg1.jpg" alt="" height="450">
+                              </div>
+                              <div class="carousel-item">
+                                  <img src="img/bg1.jpg" alt="" height="450">
+                              </div>
+                              <div class="carousel-item">
+                                  <img src="img/bg1.jpg" alt="" height="450">
+                              </div>
+                          </div>
+                          <a href="#secundary-carousel" class="carousel-control-prev" data-slide="prev">
+                              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                              <span class="sr-only">Anterior</span>
+                          </a>
+                          <a href="#secundary-carousel" class="carousel-control-next" data-slide="next">
+                              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                              <span class="sr-only">Siguiente</span>
+                          </a>
+                      </div>
+
+                  </div>
+
+                </div>
+
+              </div>
 
             </div>
 
@@ -74,9 +106,15 @@
                   <div class="col">
 
                     <div class="alert alert-info  text-justify">
+
                         <strong>Aviso: </strong> La página web está en desarrollo, es muy probable
                         que los aspectos de la misma se modifiquen constantemente. Por favor, deja
                         tus comentarios.
+
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Cerrar">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+
                     </div>
 
                   </div>
@@ -91,7 +129,7 @@
                   <div class="col-8 mb-3 ml-3">
 
                     <!-- Titular Blog -->
-                    <h2 class="display-2  mt-3 mb-3">Últimas entradas</h2>
+                    <h2 class="display-2 gerh mt-3 mb-3">Últimas entradas</h2>
 
                     <!-- Primer fila de 3 cartas -->
                     <div class="row mb-3 ">
@@ -239,12 +277,49 @@
             </div>
 
             <!-- Contenedor del footer -->
-            <div class="row">
+            <div class="row bg-dark p-3">
               <div class="col-12">
 
                 <!--Otro row para poder posicionar el contenido en columnas -->
-                <div class="row">
+                <div class="row m-4 justify-content-around">
                   <!-- TODO: Agregar las columnas para la información que se mostrará -->
+
+                  <!-- Desarrollado por -->
+                  <div class="col-4 align-self-center">
+                    <p class="h3 text-light">iwebblog</p>
+                    <p class="h5 text-light mb-0 ">Desarrollado por <strong>Gerardo Hernández</strong></p>
+                  </div>
+
+                  <!-- Hecho con -->
+                  <div class="col-3">
+                    <p class="h3 text-light">Hecho con o y :</p>
+                    <p class="h6 text-light">bootstrap</p>
+                    <p class="h6 text-light">html5</p>
+                    <p class="h6 text-light">javascript</p>
+                    <p class="h6 text-light">css3</p>
+                  </div>
+
+
+                  <!-- Redes Sociales -->
+                  <div class="col-4">
+                    <p class="h3 text-light mb-3">Redes Sociales</p>
+                    <!-- Otro row para poner los íconos inline -->
+                    <div class="row">
+                      <div class="col">
+                        <p class="text-light">facebook</p>
+                      </div>
+                      <div class="col">
+                        <p class="text-light">twitter</p>
+                      </div>
+                      <div class="col">
+                        <p class="text-light">youtube</p>
+                      </div>
+                      <div class="col">
+                        <p class="text-light">github</p>
+                      </div>
+                    </div>
+                  </div>
+
                 </div>
 
               </div>
