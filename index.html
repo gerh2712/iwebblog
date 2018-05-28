@@ -5,7 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Font awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Bootstrap Core -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Material Design Bootstrap -->
+    <link href="css/mdb.min.css" rel="stylesheet">
+    <!-- Your custom styles (optional) -->
+    <link href="css/style.css" rel="stylesheet">
     <title>Inicio - iwebblog</title>
 </head>
 
@@ -24,29 +31,46 @@
                 <div class="row">
 
                   <!--Barra de navegación -->
-                  <!-- FIXME: Esta columna de 12 se oculta en la parte superior -->
                   <div class="col-12 mt-3">
-                    <ul class="nav nav-tabs">
-                      <li class="nav-item">
-                        <a class="nav-link active" href="#">Active</a>
-                      </li>
-                      <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
-                        <div class="dropdown-menu">
-                          <a class="dropdown-item" href="#">Action</a>
-                          <a class="dropdown-item" href="#">Another action</a>
-                          <a class="dropdown-item" href="#">Something else here</a>
-                          <div class="dropdown-divider"></div>
-                          <a class="dropdown-item" href="#">Separated link</a>
-                        </div>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link disabled" href="#">Disabled</a>
-                      </li>
-                    </ul>
+
+                    
+                    <!--Main Navigation-->
+
+
+                        <nav class="navbar fixed-top navbar-expand-lg navbar-dark unique-color scrolling-navbar">
+                            <a class="navbar-brand" href="#"><strong>Navbar</strong></a>
+                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                                <ul class="navbar-nav mr-auto">
+                                    <li class="nav-item active">
+                                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Features</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Pricing</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Opinions</a>
+                                    </li>
+                                </ul>
+                                <ul class="navbar-nav nav-flex-icons">
+                                    <li class="nav-item">
+                                        <a class="nav-link"><i class="fa fa-facebook"></i></a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link"><i class="fa fa-twitter"></i></a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link"><i class="fa fa-instagram"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </nav>          
+
                   </div>
 
                 </div>
@@ -69,7 +93,7 @@
                                       <h4>Título de la imagen</h4>
                                       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, dignissimos.</p>
                                   </div>
-                                  <img src="img/bg1.jpg" alt="" height="450">
+                                  <img src="img/Logo.png" alt="" height="450">
                               </div>
                               <div class="carousel-item">
                                   <img src="img/bg1.jpg" alt="" height="450">
@@ -97,7 +121,7 @@
             </div>
 
             <!-- Contenido principal -->
-            <div class="row mt-3 p-2 mb-3">
+            <div class="row mt-3 pt-2 pr-2 pl-2 pb-0">
               <div class="col-12">
 
                 <!-- Alert -->
@@ -105,11 +129,11 @@
 
                   <div class="col">
 
-                    <div class="alert alert-info  text-justify">
+                    <div class="alert  info-color-dark  text-justify text-light">
 
-                        <strong>Aviso: </strong> La página web está en desarrollo, es muy probable
-                        que los aspectos de la misma se modifiquen constantemente. Por favor, deja
-                        tus comentarios.
+                        <strong>Aviso: </strong> La página web está en desarrollo, probablemente
+                        los aspectos de la misma se modifiquen constantemente. Por favor, deja
+                        tus comentarios en nuestras Redes Sociales.
 
                         <button type="button" class="close" data-dismiss="alert" aria-label="Cerrar">
                             <span aria-hidden="true">&times;</span>
@@ -132,100 +156,213 @@
                     <h2 class="display-2 gerh mt-3 mb-3">Últimas entradas</h2>
 
                     <!-- Primer fila de 3 cartas -->
-                    <div class="row mb-3 ">
+                    <div class="row mb-3 justify-content-between ">
 
-                      <div class="col">
+                      <div class="col-6 mb-3">
 
-                        <div class="card-group">
+                          <div class="card ">
 
-                          <div class="card">
-                            <div class="card-header">
-                              <small class="text-muted">Encabezado de la Card</small>
-                            </div>
+                              <!-- Card image -->
+                              <div class="view overlay">
+                                <img class="card-img-top" src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(67).jpg" alt="Card image cap">
+                                <a href="#!">
+                                  <div class="mask rgba-white-slight"></div>
+                                </a>
+                              </div>
+    
+                              <!-- Card content -->
                               <div class="card-body">
-                                  <img src="http://placeimg.com/300/100/tech" class="card-img-top img-fluid">
-                                  <h1 class="card-title">Encabezado</h1>
-                                  <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
-                                  <button class="btn btn-primary btn-block">Boton</button>
+    
+                                <!-- Title -->
+                                <h4 class="card-title">Card title</h4>
+                                <!-- Text -->
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                <!-- Button -->
+                                <button type="button" name="button" class="btn btn-primary btn-block">Botón</button>
+    
                               </div>
-                          </div>
-
-                          <div class="card">
-                            <div class="card-header">
-                              <small class="text-muted">Encabezado de la Card</small>
-                            </div>
-                              <div class="card-body">
-                                  <img src="http://placeimg.com/300/100/tech" class="card-img-top img-fluid">
-                                  <h1 class="card-title">Encabezado</h1>
-                                  <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
-                                  <button class="btn btn-primary btn-block">Boton</button>
+    
+                              <div class="card-footer">
+                                <small class="text-muted">
+                                  Pie de página
+                                </small>
                               </div>
+    
                           </div>
-
-                          <div class="card">
-                              <div class="card-header">
-                              <small class="text-muted">Encabezado de la Card</small>
-                            </div>
-                            <div class="card-body">
-                                  <img src="http://placeimg.com/300/100/tech" class="card-img-top img-fluid">
-                                  <h1 class="card-title">Encabezado</h1>
-                                  <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
-                                  <button class="btn btn-primary btn-block">Boton</button>
-                              </div>
-                          </div>
-
-                      </div>
+                       
                       </div>
 
-                    </div>
+                      <div class="col-6 mb-3">
 
-                      <!-- Segunda fila de 3 cartas -->
-                      <div class="row mb-3 ">
+                          <div class="card ">
 
-                        <div class="col">
-
-                          <div class="card-group">
-
-                            <div class="card">
-                              <div class="card-header">
-                                <small class="text-muted">Encabezado de la Card</small>
+                              <!-- Card image -->
+                              <div class="view overlay">
+                                <img class="card-img-top" src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(67).jpg" alt="Card image cap">
+                                <a href="#!">
+                                  <div class="mask rgba-white-slight"></div>
+                                </a>
                               </div>
-                                <div class="card-body">
-                                    <img src="http://placeimg.com/300/100/tech" class="card-img-top img-fluid">
-                                    <h1 class="card-title">Encabezado</h1>
-                                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
-                                    <button class="btn btn-primary btn-block">Boton</button>
-                                </div>
-                            </div>
-
-                            <div class="card">
-                              <div class="card-header">
-                                <small class="text-muted">Encabezado de la Card</small>
-                              </div>
-                                <div class="card-body">
-                                    <img src="http://placeimg.com/300/100/tech" class="card-img-top img-fluid">
-                                    <h1 class="card-title">Encabezado</h1>
-                                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
-                                    <button class="btn btn-primary btn-block">Boton</button>
-                                </div>
-                            </div>
-
-                            <div class="card">
-                                <div class="card-header">
-                                <small class="text-muted">Encabezado de la Card</small>
-                              </div>
+    
+                              <!-- Card content -->
                               <div class="card-body">
-                                    <img src="http://placeimg.com/300/100/tech" class="card-img-top img-fluid">
-                                    <h1 class="card-title">Encabezado</h1>
-                                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
-                                    <button class="btn btn-primary btn-block">Boton</button>
-                                </div>
-                            </div>
-
-                        </div>
-                        </div>
-
+    
+                                <!-- Title -->
+                                <h4 class="card-title">Card title</h4>
+                                <!-- Text -->
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                <!-- Button -->
+                                <button type="button" name="button" class="btn btn-primary btn-block">Botón</button>
+    
+                              </div>
+    
+                              <div class="card-footer">
+                                <small class="text-muted">
+                                  Pie de página
+                                </small>
+                              </div>
+    
+                          </div>
+                       
                       </div>
+
+                      <div class="col-6 mb-3">
+
+                          <div class="card ">
+
+                              <!-- Card image -->
+                              <div class="view overlay">
+                                <img class="card-img-top" src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(67).jpg" alt="Card image cap">
+                                <a href="#!">
+                                  <div class="mask rgba-white-slight"></div>
+                                </a>
+                              </div>
+    
+                              <!-- Card content -->
+                              <div class="card-body">
+    
+                                <!-- Title -->
+                                <h4 class="card-title">Card title</h4>
+                                <!-- Text -->
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                <!-- Button -->
+                                <button type="button" name="button" class="btn btn-primary btn-block">Botón</button>
+    
+                              </div>
+    
+                              <div class="card-footer">
+                                <small class="text-muted">
+                                  Pie de página
+                                </small>
+                              </div>
+    
+                          </div>
+                       
+                      </div>
+
+                      <div class="col-6 mb-3">
+
+                          <div class="card ">
+
+                              <!-- Card image -->
+                              <div class="view overlay">
+                                <img class="card-img-top" src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(67).jpg" alt="Card image cap">
+                                <a href="#!">
+                                  <div class="mask rgba-white-slight"></div>
+                                </a>
+                              </div>
+    
+                              <!-- Card content -->
+                              <div class="card-body">
+    
+                                <!-- Title -->
+                                <h4 class="card-title">Card title</h4>
+                                <!-- Text -->
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                <!-- Button -->
+                                <button type="button" name="button" class="btn btn-primary btn-block">Botón</button>
+    
+                              </div>
+    
+                              <div class="card-footer">
+                                <small class="text-muted">
+                                  Pie de página
+                                </small>
+                              </div>
+    
+                          </div>
+                       
+                      </div>
+
+                      <div class="col-6 mb-3">
+
+                          <div class="card ">
+
+                              <!-- Card image -->
+                              <div class="view overlay">
+                                <img class="card-img-top" src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(67).jpg" alt="Card image cap">
+                                <a href="#!">
+                                  <div class="mask rgba-white-slight"></div>
+                                </a>
+                              </div>
+    
+                              <!-- Card content -->
+                              <div class="card-body">
+    
+                                <!-- Title -->
+                                <h4 class="card-title">Card title</h4>
+                                <!-- Text -->
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                <!-- Button -->
+                                <button type="button" name="button" class="btn btn-primary btn-block">Botón</button>
+    
+                              </div>
+    
+                              <div class="card-footer">
+                                <small class="text-muted">
+                                  Pie de página
+                                </small>
+                              </div>
+    
+                          </div>
+                       
+                      </div>
+
+                      <div class="col-6 mb-3">
+
+                          <div class="card ">
+
+                              <!-- Card image -->
+                              <div class="view overlay">
+                                <img class="card-img-top" src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(67).jpg" alt="Card image cap">
+                                <a href="#!">
+                                  <div class="mask rgba-white-slight"></div>
+                                </a>
+                              </div>
+    
+                              <!-- Card content -->
+                              <div class="card-body">
+    
+                                <!-- Title -->
+                                <h4 class="card-title">Card title</h4>
+                                <!-- Text -->
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                <!-- Button -->
+                                <button type="button" name="button" class="btn btn-primary btn-block">Botón</button>
+    
+                              </div>
+    
+                              <div class="card-footer">
+                                <small class="text-muted">
+                                  Pie de página
+                                </small>
+                              </div>
+    
+                          </div>
+                       
+                      </div>
+
+                    </div>                      
 
                   </div>
 
@@ -273,11 +410,59 @@
 
                 </div>
 
+                <!-- Fila de cartas -->
+                <div class="row unique-color pl-2 pr-2 pt-4 pb-4 m-0">
+
+                    <div class="col-12">
+
+                      <div class="card-group">
+
+                        <div class="card">
+                          <div class="card-header">
+                            <small class="text-muted">Encabezado de la Card</small>
+                          </div>
+                            <div class="card-body">
+                                <img src="http://placeimg.com/300/100/tech" class="card-img-top img-fluid">
+                                <h1 class="card-title">Encabezado</h1>
+                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                                <button class="btn btn-primary btn-block">Boton</button>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                          <div class="card-header">
+                            <small class="text-muted">Encabezado de la Card</small>
+                          </div>
+                            <div class="card-body">
+                                <img src="http://placeimg.com/300/100/tech" class="card-img-top img-fluid">
+                                <h1 class="card-title">Encabezado</h1>
+                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                                <button class="btn btn-primary btn-block">Boton</button>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-header">
+                            <small class="text-muted">Encabezado de la Card</small>
+                          </div>
+                          <div class="card-body">
+                                <img src="http://placeimg.com/300/100/tech" class="card-img-top img-fluid">
+                                <h1 class="card-title">Encabezado</h1>
+                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                                <button class="btn btn-primary btn-block">Boton</button>
+                            </div>
+                        </div>
+
+                    </div>
+                    </div>
+
+                </div>
+
               </div>
             </div>
 
             <!-- Contenedor del footer -->
-            <div class="row bg-dark p-3">
+            <div class="row unique-color-dark p-3">
               <div class="col-12">
 
                 <!--Otro row para poder posicionar el contenido en columnas -->
@@ -329,9 +514,18 @@
         </div>
 
     </div>
+
+    <!-- JQuery -->
     <script src="js/jquery-3.3.1.min.js"></script>
+
+    <!-- popper -->
     <script src="js/popper.js"></script>
+
+    <!-- Bootstrap -->
     <script src="js/bootstrap.min.js"></script>
+
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="js/mdb.min.js"></script>
 </body>
 
 </html>
