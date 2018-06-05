@@ -542,21 +542,17 @@
                                   <button class="btn btn-lg  btn-primary" type="submit" name="benviar">Enviar</button>
                               </div>
 
-                          </form>
+                          </form>                            
 
-                            <?php if(!empty($errores)): ?>
+                            <?php if(!empty($var1)): ?>
 
                             <div class="alert  warning-color-dark  text-justify text-light">
 
-                              <p><strong>Aviso: </strong> <br> <?php echo $errores ?></p>
-
-                              <button type="button" class="close" data-dismiss="alert" aria-label="Cerrar">
-                                <span aria-hidden="true">&times;</span>
-                              </button>
+                              <p><strong>Aviso: </strong> <?php echo $var1 ?></p>
 
                             </div>
 
-                            <?php elseif ($confirmacionFormulario): ?>
+                            <?php elseif ($var2): ?>
                             <div class="alert success-color text-justify text-light">
 
                               <p>Enviado Correctamente</p>                          

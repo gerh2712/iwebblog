@@ -2,8 +2,8 @@
 
 //Esta variable permite mostrar el mensaje de error en caso de que no se haya 
 //introducido algún dato
-$errores = '';
-$confimacionFormulario = '';
+$var1 = '';
+$var2 = '';
 
 //Condicional que permite saber si se ha hecho clic en enviar
 if(isset($_POST['benviar']))  {
@@ -23,7 +23,7 @@ if(isset($_POST['benviar']))  {
         $nombre = filter_var($nombre, FILTER_SANITIZE_STRING);
     }elseif (empty($nombre)) {
         //Mensaje de error si no se introdujo un nombre 
-        $errores .= 'Por favor ingresa un nombre <br />';
+        $var1 .= '<br />Por favor ingresa un nombre';
     }
 
     if (!empty($email)) {
@@ -31,13 +31,13 @@ if(isset($_POST['benviar']))  {
         $email = filter_var($email, FILTER_SANITIZE_EMAIL);
         
         if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-            $errores .= 'Por favor ingresa un correo válido <br />';
+            $var1 .= '<br /> Por favor ingresa un correo válido';
         }
     }else {
-        $errores .= 'Por favor ingresa un correo <br />';
+        $var1 .= '<br /> Por favor ingresa un correo';
     }
 }
  
-require '../index.view.php'   
+require 'index.view.php'
 
 ?>
