@@ -510,28 +510,28 @@
                               <!-- Nombre input text -->
                               <div class="md-form">
                                   <i class="fa fa-user prefix white-text"></i>
-                                  <input type="text" id="materialFormContactNameEx" class="form-control form-control-lg text-light" name="nombre">
+                                  <input type="text" id="materialFormContactNameEx" class="form-control form-control-lg text-light" name="nombre" value="<?php if(!$var2 && isset($nombre)) {echo $nombre;} ?>">
                                   <label for="materialFormContactNameEx" class="white-text">Tu nombre</label>
                               </div>
 
                               <!-- correo input email -->
                               <div class="md-form">
                                   <i class="fa fa-envelope prefix white-text"></i>
-                                  <input type="email" id="materialFormContactEmailEx" class="form-control form-control-lg text-light" name="email">
+                                  <input type="email" id="materialFormContactEmailEx" class="form-control form-control-lg text-light" name="email" value="<?php if(!$var2 && isset($email)) {echo $email;} ?>">
                                   <label for="materialFormContactEmailEx" class="white-text">Tu email</label>
                               </div>
 
                               <!-- Asunto input subject -->
                               <div class="md-form">
                                   <i class="fa fa-tag prefix white-text"></i>
-                                  <input type="text" id="materialFormContactSubjectEx" class="form-control form-control-lg text-light" name="asunto">
+                                  <input type="text" id="materialFormContactSubjectEx" class="form-control form-control-lg text-light" name="asunto" value="<?php if(!$var2 && isset($asunto)) {echo $asunto;} ?>">
                                   <label for="materialFormContactSubjectEx" class="white-text">Asunto</label>
                               </div>
 
                               <!-- Mensaje textarea message -->
                               <div class="md-form">
                                   <i class="fa fa-pencil prefix white-text"></i>
-                                  <textarea type="text" id="materialFormContactMessageEx" class="form-control form-control-lg text-light md-textarea" rows="3" name="mensaje"></textarea>
+                                  <textarea type="text" id="materialFormContactMessageEx" class="form-control form-control-lg text-light md-textarea" rows="3" name="mensaje"><?php if(!$var2 && isset($mensaje)) {echo $mensaje;} ?></textarea>
                                   <label for="materialFormContactMessageEx" class="white-text">Tu mensaje</label>
                               </div>
 
