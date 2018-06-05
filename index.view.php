@@ -8,11 +8,11 @@
     <!-- Font awesome MDB-->
     <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">-->
     <!-- Bootstrap Core -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css?ver=1.0">
     <!-- Material Design Bootstrap -->
-    <link href="css/mdb.min.css" rel="stylesheet">
+    <link href="css/mdb.min.css?ver=1.0" rel="stylesheet">
     <!-- Font Awesome 5 -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css?ver=1.0" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
     <!-- Your custom styles (optional) -->
     <link href="css/style.css" rel="stylesheet">
     <!-- Scroll Reveal -->
@@ -504,7 +504,7 @@
               <!-- Material form contact -->
               <div class="row m-3">
                     <div class="col-12">
-                          <form class="m-3 p-3" action="php/contacto.php <?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post">
+                          <form class="m-3 p-3" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post">
                               <p class="h4 text-center text-light mb-4"> Contacto</p>
 
                               <!-- Nombre input text -->
@@ -537,38 +537,37 @@
 
                               <!-- FIXME: Se pierden los estilos al pulsar enviar y se recarga la página ejecutando
                               el código php pero se pierden los estilos css. Además tengo que indicar la dirección
-                              del archivo de lógica o no ocurre nada -->
-
-                                <?php if(!empty($errores)): ?>
-
-                                  <div class="alert  warning-color-dark  text-justify text-light">
-
-                                    <p><strong>Aviso: </strong> <?php echo $errores ?></p>
-
-                                    <button type="button" class="close" data-dismiss="alert" aria-label="Cerrar">
-                                      <span aria-hidden="true">&times;</span>
-                                    </button>
-
-                                  </div>
-
-                                <?php elseif($enviado): ?>
-                                  <div class="alert success-color text-justify text-light">
-
-                                    <p>Enviado Correctamente</p>                          
-
-                                    <button type="button" class="close" data-dismiss="alert" aria-label="Cerrar">
-                                      <span aria-hidden="true">&times;</span>
-                                    </button>
-                                
-                                  </div>
-                                <?php endif ?>
-
-
+                              del archivo de lógica o no ocurre nada -->                                
                               <div class="text-center mt-4">
                                   <button class="btn btn-lg  btn-primary" type="submit" name="benviar">Enviar</button>
                               </div>
 
                           </form>
+
+                            <?php if(!empty($errores)): ?>
+
+                            <div class="alert  warning-color-dark  text-justify text-light">
+
+                              <p><strong>Aviso: </strong> <br> <?php echo $errores ?></p>
+
+                              <button type="button" class="close" data-dismiss="alert" aria-label="Cerrar">
+                                <span aria-hidden="true">&times;</span>
+                              </button>
+
+                            </div>
+
+                            <?php elseif ($confirmacionFormulario): ?>
+                            <div class="alert success-color text-justify text-light">
+
+                              <p>Enviado Correctamente</p>                          
+
+                              <button type="button" class="close" data-dismiss="alert" aria-label="Cerrar">
+                                <span aria-hidden="true">&times;</span>
+                              </button>
+
+                            </div>
+                            <?php endif ?>
+
                     </div>
               </div>
 
