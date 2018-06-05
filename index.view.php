@@ -535,6 +535,10 @@
                                   <label for="materialFormContactMessageEx" class="white-text">Tu mensaje</label>
                               </div>
 
+                              <!-- FIXME: Se pierden los estilos al pulsar enviar y se recarga la página ejecutando
+                              el código php pero se pierden los estilos css. Además tengo que indicar la dirección
+                              del archivo de lógica o no ocurre nada -->
+
                                 <?php if(!empty($errores)): ?>
 
                                   <div class="alert  warning-color-dark  text-justify text-light">
