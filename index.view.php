@@ -501,46 +501,72 @@
             <div class="row unique-color-dark p-3">
               <div class="col-12">
 
-            <!-- Material form contact -->
-            <div class="row m-3">
-                  <div class="col-12">
-                        <form class="m-3 p-3" action="php/contacto.php <?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post">
-                            <p class="h4 text-center text-light mb-4"> Contacto</p>
+              <!-- Material form contact -->
+              <div class="row m-3">
+                    <div class="col-12">
+                          <form class="m-3 p-3" action="php/contacto.php <?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post">
+                              <p class="h4 text-center text-light mb-4"> Contacto</p>
 
-                            <!-- Nombre input text -->
-                            <div class="md-form">
-                                <i class="fa fa-user prefix white-text"></i>
-                                <input type="text" id="materialFormContactNameEx" class="form-control form-control-lg text-light" name="nombre">
-                                <label for="materialFormContactNameEx" class="white-text">Tu nombre</label>
-                            </div>
+                              <!-- Nombre input text -->
+                              <div class="md-form">
+                                  <i class="fa fa-user prefix white-text"></i>
+                                  <input type="text" id="materialFormContactNameEx" class="form-control form-control-lg text-light" name="nombre">
+                                  <label for="materialFormContactNameEx" class="white-text">Tu nombre</label>
+                              </div>
 
-                            <!-- correo input email -->
-                            <div class="md-form">
-                                <i class="fa fa-envelope prefix white-text"></i>
-                                <input type="email" id="materialFormContactEmailEx" class="form-control form-control-lg text-light" name="email">
-                                <label for="materialFormContactEmailEx" class="white-text">Tu email</label>
-                            </div>
+                              <!-- correo input email -->
+                              <div class="md-form">
+                                  <i class="fa fa-envelope prefix white-text"></i>
+                                  <input type="email" id="materialFormContactEmailEx" class="form-control form-control-lg text-light" name="email">
+                                  <label for="materialFormContactEmailEx" class="white-text">Tu email</label>
+                              </div>
 
-                            <!-- Asunto input subject -->
-                            <div class="md-form">
-                                <i class="fa fa-tag prefix white-text"></i>
-                                <input type="text" id="materialFormContactSubjectEx" class="form-control form-control-lg text-light" name="asunto">
-                                <label for="materialFormContactSubjectEx" class="white-text">Asunto</label>
-                            </div>
+                              <!-- Asunto input subject -->
+                              <div class="md-form">
+                                  <i class="fa fa-tag prefix white-text"></i>
+                                  <input type="text" id="materialFormContactSubjectEx" class="form-control form-control-lg text-light" name="asunto">
+                                  <label for="materialFormContactSubjectEx" class="white-text">Asunto</label>
+                              </div>
 
-                            <!-- Mensaje textarea message -->
-                            <div class="md-form">
-                                <i class="fa fa-pencil prefix white-text"></i>
-                                <textarea type="text" id="materialFormContactMessageEx" class="form-control form-control-lg text-light md-textarea" rows="3" name="mensaje"></textarea>
-                                <label for="materialFormContactMessageEx" class="white-text">Tu mensaje</label>
-                            </div>
+                              <!-- Mensaje textarea message -->
+                              <div class="md-form">
+                                  <i class="fa fa-pencil prefix white-text"></i>
+                                  <textarea type="text" id="materialFormContactMessageEx" class="form-control form-control-lg text-light md-textarea" rows="3" name="mensaje"></textarea>
+                                  <label for="materialFormContactMessageEx" class="white-text">Tu mensaje</label>
+                              </div>
 
-                            <div class="text-center mt-4">
-                                <button class="btn btn-lg  btn-primary" type="submit">Enviar</button>
-                            </div>
-                        </form>
-                  </div>
-            </div>
+                                <?php if(!empty($errores)): ?>
+
+                                  <div class="alert  warning-color-dark  text-justify text-light">
+
+                                    <p><strong>Aviso: </strong> <?php echo $errores ?></p>
+
+                                    <button type="button" class="close" data-dismiss="alert" aria-label="Cerrar">
+                                      <span aria-hidden="true">&times;</span>
+                                    </button>
+
+                                  </div>
+
+                                <?php elseif($enviado): ?>
+                                  <div class="alert success-color text-justify text-light">
+
+                                    <p>Enviado Correctamente</p>                          
+
+                                    <button type="button" class="close" data-dismiss="alert" aria-label="Cerrar">
+                                      <span aria-hidden="true">&times;</span>
+                                    </button>
+                                
+                                  </div>
+                                <?php endif ?>
+
+
+                              <div class="text-center mt-4">
+                                  <button class="btn btn-lg  btn-primary" type="submit" name="benviar">Enviar</button>
+                              </div>
+
+                          </form>
+                    </div>
+              </div>
 
                 <!--Otro row para poder posicionar el contenido en columnas -->
                 <div class="row mx-4 my-5  justify-content-around">
