@@ -17,7 +17,7 @@
     <link href="css/style.css" rel="stylesheet">
     <!-- Scroll Reveal -->
     <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
-    <title>Inicio - Fusionando</title>
+    <title>Inicio - iwebblog</title>
 </head>
 
 <body style="background: #f2f2f2;">
@@ -504,7 +504,7 @@
             <!-- Material form contact -->
             <div class="row m-3">
                   <div class="col-12">
-                        <form class="m-3 p-3" action="php/contacto.php" method="post">
+                        <form class="m-3 p-3" action="php/contacto.php <?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post">
                             <p class="h4 text-center text-light mb-4"> Contacto</p>
 
                             <!-- Nombre input text -->
