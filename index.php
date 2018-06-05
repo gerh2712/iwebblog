@@ -38,6 +38,6 @@ if(isset($_POST['benviar']))  {
     }
 }
  
-require 'index.view.php'
+require 'php/index.view.php'
 
 ?>
