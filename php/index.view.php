@@ -590,11 +590,14 @@
                                 <p class="h6 text-light"><i class="fab fa-html5 fa-2x mr-2"></i> HTML 5</p>
                           </div>
                           <div class="col-12 my-2">
+                                <p class="h6 text-light"><i class="fab fa-css3 fa-2x mr-2"> </i>  CSS 3</p>
+                          </div>
+                          <div class="col-12 my-2">
                                 <p class="h6 text-light"><i class="fab fa-js-square fa-2x mr-2"></i>  JavaScript</p>
                           </div>
                           <div class="col-12 my-2">
-                                <p class="h6 text-light"><i class="fab fa-css3 fa-2x mr-2"> </i>  CSS 3</p>
-                          </div>
+                                <p class="h6 text-light"><i class="fab fa-php fa-2x mr-2"></i>  PHP</p>
+                          </div>                          
                           <div class="col-12 my-2">
                                 <p class="h6 text-light"><i class="fab fa-font-awesome fa-2x mr-2"></i>  fontawesome</p>
                           </div>
