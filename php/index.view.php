@@ -138,213 +138,260 @@
                     <!-- Titular Blog -->
                     <h2 class="display-2 gerh mt-3 mb-3">Últimas entradas</h2>
 
-                    <!-- Primer fila de 3 cartas -->
+                    <!-- Ultimas entradas -->
                     <div class="row mb-3 justify-content-between ">
 
-                      <div class="col-6 mb-3">
+                      <section>
+                      
+                        <div class="col-6 mb-3">
+  
+                            <div class="card ">
+  
+                                <!-- Card image -->
+                                <div class="view overlay">
+                                  <img class="card-img-top" src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(67).jpg" alt="Card image cap">
+                                  <a href="#!">
+                                    <div class="mask rgba-white-slight"></div>
+                                  </a>
+                                </div>
+  
+                                <!-- Card content -->
+                                <div class="card-body">
+  
+                                  <!-- Title -->
+                                  <h4 class="card-title">Card title</h4>
+                                  <!-- Text -->
+                                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                  <!-- Button -->
+                                  <button type="button" name="button" class="btn btn-primary btn-block">Botón</button>
+  
+                                </div>
+  
+                                <div class="card-footer">
+                                  <small class="text-muted">
+                                    Pie de página
+                                  </small>
+                                </div>
+  
+                            </div>
+  
+                        </div>
+  
+                        <div class="col-6 mb-3">
+  
+                            <div class="card ">
+  
+                                <!-- Card image -->
+                                <div class="view overlay">
+                                  <img class="card-img-top" src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(67).jpg" alt="Card image cap">
+                                  <a href="#!">
+                                    <div class="mask rgba-white-slight"></div>
+                                  </a>
+                                </div>
+  
+                                <!-- Card content -->
+                                <div class="card-body">
+  
+                                  <!-- Title -->
+                                  <h4 class="card-title">Card title</h4>
+                                  <!-- Text -->
+                                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                  <!-- Button -->
+                                  <button type="button" name="button" class="btn btn-primary btn-block">Botón</button>
+  
+                                </div>
+  
+                                <div class="card-footer">
+                                  <small class="text-muted">
+                                    Pie de página
+                                  </small>
+                                </div>
+  
+                            </div>
+  
+                        </div>
+  
+                        <div class="col-6 mb-3">
+  
+                            <div class="card ">
+  
+                                <!-- Card image -->
+                                <div class="view overlay">
+                                  <img class="card-img-top" src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(67).jpg" alt="Card image cap">
+                                  <a href="#!">
+                                    <div class="mask rgba-white-slight"></div>
+                                  </a>
+                                </div>
+  
+                                <!-- Card content -->
+                                <div class="card-body">
+  
+                                  <!-- Title -->
+                                  <h4 class="card-title">Card title</h4>
+                                  <!-- Text -->
+                                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                  <!-- Button -->
+                                  <button type="button" name="button" class="btn btn-primary btn-block">Botón</button>
+  
+                                </div>
+  
+                                <div class="card-footer">
+                                  <small class="text-muted">
+                                    Pie de página
+                                  </small>
+                                </div>
+  
+                            </div>
+  
+                        </div>
+  
+                        <div class="col-6 mb-3">
+  
+                            <div class="card ">
+  
+                                <!-- Card image -->
+                                <div class="view overlay">
+                                  <img class="card-img-top" src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(67).jpg" alt="Card image cap">
+                                  <a href="#!">
+                                    <div class="mask rgba-white-slight"></div>
+                                  </a>
+                                </div>
+  
+                                <!-- Card content -->
+                                <div class="card-body">
+  
+                                  <!-- Title -->
+                                  <h4 class="card-title">Card title</h4>
+                                  <!-- Text -->
+                                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                  <!-- Button -->
+                                  <button type="button" name="button" class="btn btn-primary btn-block">Botón</button>
+  
+                                </div>
+  
+                                <div class="card-footer">
+                                  <small class="text-muted">
+                                    Pie de página
+                                  </small>
+                                </div>
+  
+                            </div>
+  
+                        </div>
+  
+                        <div class="col-6 mb-3">
+  
+                            <div class="card ">
+  
+                                <!-- Card image -->
+                                <div class="view overlay">
+                                  <img class="card-img-top" src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(67).jpg" alt="Card image cap">
+                                  <a href="#!">
+                                    <div class="mask rgba-white-slight"></div>
+                                  </a>
+                                </div>
+  
+                                <!-- Card content -->
+                                <div class="card-body">
+  
+                                  <!-- Title -->
+                                  <h4 class="card-title">Card title</h4>
+                                  <!-- Text -->
+                                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                  <!-- Button -->
+                                  <button type="button" name="button" class="btn btn-primary btn-block">Botón</button>
+  
+                                </div>
+  
+                                <div class="card-footer">
+                                  <small class="text-muted">
+                                    Pie de página
+                                  </small>
+                                </div>
+  
+                            </div>
+  
+                        </div>
+  
+                        <div class="col-6 mb-3">
+  
+                            <div class="card ">
+  
+                                <!-- Card image -->
+                                <div class="view overlay">
+                                  <img class="card-img-top" src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(67).jpg" alt="Card image cap">
+                                  <a href="#!">
+                                    <div class="mask rgba-white-slight"></div>
+                                  </a>
+                                </div>
+  
+                                <!-- Card content -->
+                                <div class="card-body">
+  
+                                  <!-- Title -->
+                                  <h4 class="card-title">Card title</h4>
+                                  <!-- Text -->
+                                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                  <!-- Button -->
+                                  <button type="button" name="button" class="btn btn-primary btn-block">Botón</button>
+  
+                                </div>
+  
+                                <div class="card-footer">
+                                  <small class="text-muted">
+                                    Pie de página
+                                  </small>
+                                </div>
+  
+                            </div>
+  
+                        </div>
 
-                          <div class="card ">
+                      </section>
 
-                              <!-- Card image -->
-                              <div class="view overlay">
-                                <img class="card-img-top" src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(67).jpg" alt="Card image cap">
-                                <a href="#!">
-                                  <div class="mask rgba-white-slight"></div>
-                                </a>
-                              </div>
+                    </div>
 
-                              <!-- Card content -->
-                              <div class="card-body">
+                    <!-- Pagination -->
+                    <div class="row m-2 p-3">
+                      <div class="col-12">
 
-                                <!-- Title -->
-                                <h4 class="card-title">Card title</h4>
-                                <!-- Text -->
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <!-- Button -->
-                                <button type="button" name="button" class="btn btn-primary btn-block">Botón</button>
+                      <!--Pagination -->
+                        <nav aria-label="pagination example">
+                            <ul class="pagination pagination-lg pagination-circle pg-blue justify-content-center mb-0">
 
-                              </div>
+                                <!--First-->
+                                <li class="page-item disabled"><a class="page-link">First</a></li>
 
-                              <div class="card-footer">
-                                <small class="text-muted">
-                                  Pie de página
-                                </small>
-                              </div>
+                                <!--Arrow left-->
+                                <li class="page-item disabled">
+                                    <a class="page-link" aria-label="Previous">
+                                        <span aria-hidden="true">&laquo;</span>
+                                        <span class="sr-only">Previous</span>
+                                    </a>
+                                </li>
 
-                          </div>
+                                <!--Numbers-->
+                                <li class="page-item active"><a class="page-link">1</a></li>
+                                <li class="page-item"><a class="page-link">2</a></li>
+                                <li class="page-item"><a class="page-link">3</a></li>
+                                <li class="page-item"><a class="page-link">4</a></li>
+                                <li class="page-item"><a class="page-link">5</a></li>
 
+                                <!--Arrow right-->
+                                <li class="page-item">
+                                    <a class="page-link" aria-label="Next">
+                                        <span aria-hidden="true">&raquo;</span>
+                                        <span class="sr-only">Next</span>
+                                    </a>
+                                </li>
+
+                                <!--Last-->
+                                <li class="page-item"><a class="page-link">Last</a></li>
+
+                            </ul>
+                        </nav>
+                      
                       </div>
-
-                      <div class="col-6 mb-3">
-
-                          <div class="card ">
-
-                              <!-- Card image -->
-                              <div class="view overlay">
-                                <img class="card-img-top" src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(67).jpg" alt="Card image cap">
-                                <a href="#!">
-                                  <div class="mask rgba-white-slight"></div>
-                                </a>
-                              </div>
-
-                              <!-- Card content -->
-                              <div class="card-body">
-
-                                <!-- Title -->
-                                <h4 class="card-title">Card title</h4>
-                                <!-- Text -->
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <!-- Button -->
-                                <button type="button" name="button" class="btn btn-primary btn-block">Botón</button>
-
-                              </div>
-
-                              <div class="card-footer">
-                                <small class="text-muted">
-                                  Pie de página
-                                </small>
-                              </div>
-
-                          </div>
-
-                      </div>
-
-                      <div class="col-6 mb-3">
-
-                          <div class="card ">
-
-                              <!-- Card image -->
-                              <div class="view overlay">
-                                <img class="card-img-top" src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(67).jpg" alt="Card image cap">
-                                <a href="#!">
-                                  <div class="mask rgba-white-slight"></div>
-                                </a>
-                              </div>
-
-                              <!-- Card content -->
-                              <div class="card-body">
-
-                                <!-- Title -->
-                                <h4 class="card-title">Card title</h4>
-                                <!-- Text -->
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <!-- Button -->
-                                <button type="button" name="button" class="btn btn-primary btn-block">Botón</button>
-
-                              </div>
-
-                              <div class="card-footer">
-                                <small class="text-muted">
-                                  Pie de página
-                                </small>
-                              </div>
-
-                          </div>
-
-                      </div>
-
-                      <div class="col-6 mb-3">
-
-                          <div class="card ">
-
-                              <!-- Card image -->
-                              <div class="view overlay">
-                                <img class="card-img-top" src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(67).jpg" alt="Card image cap">
-                                <a href="#!">
-                                  <div class="mask rgba-white-slight"></div>
-                                </a>
-                              </div>
-
-                              <!-- Card content -->
-                              <div class="card-body">
-
-                                <!-- Title -->
-                                <h4 class="card-title">Card title</h4>
-                                <!-- Text -->
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <!-- Button -->
-                                <button type="button" name="button" class="btn btn-primary btn-block">Botón</button>
-
-                              </div>
-
-                              <div class="card-footer">
-                                <small class="text-muted">
-                                  Pie de página
-                                </small>
-                              </div>
-
-                          </div>
-
-                      </div>
-
-                      <div class="col-6 mb-3">
-
-                          <div class="card ">
-
-                              <!-- Card image -->
-                              <div class="view overlay">
-                                <img class="card-img-top" src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(67).jpg" alt="Card image cap">
-                                <a href="#!">
-                                  <div class="mask rgba-white-slight"></div>
-                                </a>
-                              </div>
-
-                              <!-- Card content -->
-                              <div class="card-body">
-
-                                <!-- Title -->
-                                <h4 class="card-title">Card title</h4>
-                                <!-- Text -->
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <!-- Button -->
-                                <button type="button" name="button" class="btn btn-primary btn-block">Botón</button>
-
-                              </div>
-
-                              <div class="card-footer">
-                                <small class="text-muted">
-                                  Pie de página
-                                </small>
-                              </div>
-
-                          </div>
-
-                      </div>
-
-                      <div class="col-6 mb-3">
-
-                          <div class="card ">
-
-                              <!-- Card image -->
-                              <div class="view overlay">
-                                <img class="card-img-top" src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(67).jpg" alt="Card image cap">
-                                <a href="#!">
-                                  <div class="mask rgba-white-slight"></div>
-                                </a>
-                              </div>
-
-                              <!-- Card content -->
-                              <div class="card-body">
-
-                                <!-- Title -->
-                                <h4 class="card-title">Card title</h4>
-                                <!-- Text -->
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <!-- Button -->
-                                <button type="button" name="button" class="btn btn-primary btn-block">Botón</button>
-
-                              </div>
-
-                              <div class="card-footer">
-                                <small class="text-muted">
-                                  Pie de página
-                                </small>
-                              </div>
-
-                          </div>
-
-                      </div>
-
                     </div>
 
                   </div>
@@ -611,16 +658,16 @@
                     <!-- Otro row para poner los íconos inline -->
                     <div class="row my-4 py-3 align-center">
                       <div class="col">
-                          <a href=""><i class="fab fa-facebook-f fa-2x text-light"></i></a>
+                          <a href=""><i class="fab fa-facebook-f fa-2x text-light hoverable"></i></a>
                       </div>
                       <div class="col">
-                          <a href=""><i class="fab fa-twitter fa-2x text-light" aria-hidden="true"></i></a>
+                          <a href=""><i class="fab fa-twitter fa-2x text-light hoverable" aria-hidden="true"></i></a>
                       </div>
                       <div class="col">
-                          <a href=""><i class="fab fa-youtube fa-2x text-light" aria-hidden="true"></i></a>
+                          <a href=""><i class="fab fa-youtube fa-2x text-light hoverable" aria-hidden="true"></i></a>
                       </div>
                       <div class="col">
-                          <a href=""><i class="fab fa-github-square fa-2x text-light" aria-hidden="true"></i></a>
+                          <a href=""><i class="fab fa-github-square fa-2x text-light hoverable" aria-hidden="true"></i></a>
                       </div>
                     </div>
                   </div>
