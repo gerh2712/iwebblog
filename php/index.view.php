@@ -139,10 +139,11 @@
                     <h2 class="display-2 gerh mt-3 mb-3">Últimas entradas</h2>
 
                     <!-- Ultimas entradas -->
-
                     <section class="row mb-3 justify-content-between articles">
 
-                    
+                      <!-- Entradas dinámicas -->
+
+                      <?php foreach ($articulos as $articulo): ?>
 
                         <div class="col-6 mb-3">
   
@@ -160,9 +161,9 @@
                                 <div class="card-body">
   
                                   <!-- Title -->
-                                  <h4 class="card-title">Card title</h4>
+                                  <h4 class="card-title"><?php echo $articulo['titulo'] ?></h4>
                                   <!-- Text -->
-                                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                  <p class="card-text text-justify"><?php echo $articulo['extracto']?></p>
                                   <!-- Button -->
                                   <button type="button" name="button" class="btn btn-primary btn-block">Botón</button>
   
@@ -170,185 +171,15 @@
   
                                 <div class="card-footer">
                                   <small class="text-muted">
-                                    Pie de página
+                                    <?php echo $articulo['id'] ?>
                                   </small>
                                 </div>
   
                             </div>
   
-                        </div>
-  
-                        <div class="col-6 mb-3">
-  
-                            <div class="card ">
-  
-                                <!-- Card image -->
-                                <div class="view overlay">
-                                  <img class="card-img-top" src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(67).jpg" alt="Card image cap">
-                                  <a href="#!">
-                                    <div class="mask rgba-white-slight"></div>
-                                  </a>
-                                </div>
-  
-                                <!-- Card content -->
-                                <div class="card-body">
-  
-                                  <!-- Title -->
-                                  <h4 class="card-title">Card title</h4>
-                                  <!-- Text -->
-                                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                  <!-- Button -->
-                                  <button type="button" name="button" class="btn btn-primary btn-block">Botón</button>
-  
-                                </div>
-  
-                                <div class="card-footer">
-                                  <small class="text-muted">
-                                    Pie de página
-                                  </small>
-                                </div>
-  
-                            </div>
-  
-                        </div>
-  
-                        <div class="col-6 mb-3">
-  
-                            <div class="card ">
-  
-                                <!-- Card image -->
-                                <div class="view overlay">
-                                  <img class="card-img-top" src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(67).jpg" alt="Card image cap">
-                                  <a href="#!">
-                                    <div class="mask rgba-white-slight"></div>
-                                  </a>
-                                </div>
-  
-                                <!-- Card content -->
-                                <div class="card-body">
-  
-                                  <!-- Title -->
-                                  <h4 class="card-title">Card title</h4>
-                                  <!-- Text -->
-                                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                  <!-- Button -->
-                                  <button type="button" name="button" class="btn btn-primary btn-block">Botón</button>
-  
-                                </div>
-  
-                                <div class="card-footer">
-                                  <small class="text-muted">
-                                    Pie de página
-                                  </small>
-                                </div>
-  
-                            </div>
-  
-                        </div>
-  
-                        <div class="col-6 mb-3">
-  
-                            <div class="card ">
-  
-                                <!-- Card image -->
-                                <div class="view overlay">
-                                  <img class="card-img-top" src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(67).jpg" alt="Card image cap">
-                                  <a href="#!">
-                                    <div class="mask rgba-white-slight"></div>
-                                  </a>
-                                </div>
-  
-                                <!-- Card content -->
-                                <div class="card-body">
-  
-                                  <!-- Title -->
-                                  <h4 class="card-title">Card title</h4>
-                                  <!-- Text -->
-                                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                  <!-- Button -->
-                                  <button type="button" name="button" class="btn btn-primary btn-block">Botón</button>
-  
-                                </div>
-  
-                                <div class="card-footer">
-                                  <small class="text-muted">
-                                    Pie de página
-                                  </small>
-                                </div>
-  
-                            </div>
-  
-                        </div>
-  
-                        <div class="col-6 mb-3">
-  
-                            <div class="card ">
-  
-                                <!-- Card image -->
-                                <div class="view overlay">
-                                  <img class="card-img-top" src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(67).jpg" alt="Card image cap">
-                                  <a href="#!">
-                                    <div class="mask rgba-white-slight"></div>
-                                  </a>
-                                </div>
-  
-                                <!-- Card content -->
-                                <div class="card-body">
-  
-                                  <!-- Title -->
-                                  <h4 class="card-title">Card title</h4>
-                                  <!-- Text -->
-                                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                  <!-- Button -->
-                                  <button type="button" name="button" class="btn btn-primary btn-block">Botón</button>
-  
-                                </div>
-  
-                                <div class="card-footer">
-                                  <small class="text-muted">
-                                    Pie de página
-                                  </small>
-                                </div>
-  
-                            </div>
-  
-                        </div>
-  
-                        <div class="col-6 mb-3">
-  
-                            <div class="card ">
-  
-                                <!-- Card image -->
-                                <div class="view overlay">
-                                  <img class="card-img-top" src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(67).jpg" alt="Card image cap">
-                                  <a href="#!">
-                                    <div class="mask rgba-white-slight"></div>
-                                  </a>
-                                </div>
-  
-                                <!-- Card content -->
-                                <div class="card-body">
-  
-                                  <!-- Title -->
-                                  <h4 class="card-title">Card title</h4>
-                                  <!-- Text -->
-                                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                  <!-- Button -->
-                                  <button type="button" name="button" class="btn btn-primary btn-block">Botón</button>
-  
-                                </div>
-  
-                                <div class="card-footer">
-                                  <small class="text-muted">
-                                    Pie de página
-                                  </small>
-                                </div>
-  
-                            </div>
-  
-                        </div>
+                        </div> 
 
-                    
+                      <?php endforeach ?>                                             
 
                     </section>
 
@@ -360,33 +191,86 @@
                         <nav aria-label="pagination example">
                             <ul class="pagination pagination-lg pagination-circle pg-blue justify-content-center mb-0">
 
-                                <!--First-->
-                                <li class="page-item disabled"><a class="page-link">First</a></li>
+                                <?php if($pagina == 1): ?>
 
-                                <!--Arrow left-->
-                                <li class="page-item disabled">
-                                    <a class="page-link" aria-label="Previous">
-                                        <span aria-hidden="true">&laquo;</span>
-                                        <span class="sr-only">Previous</span>
-                                    </a>
-                                </li>
+                                  <!--First-->
+                                  <li class="page-item disabled"><a class="page-link">Primero</a></li>
 
-                                <!--Numbers-->
-                                <li class="page-item active"><a class="page-link">1</a></li>
-                                <li class="page-item"><a class="page-link">2</a></li>
-                                <li class="page-item"><a class="page-link">3</a></li>
-                                <li class="page-item"><a class="page-link">4</a></li>                                
+                                   <!--Arrow left-->
+                                  <li class="page-item disabled">
+                                      <a class="page-link" aria-label="Previous">
+                                          <span aria-hidden="true">&laquo;</span>
+                                          <span class="sr-only">Previous</span>
+                                      </a>
+                                  </li>
+
+                                <?php else: ?>
+
+                                  <!--First-->
+                                  <li class="page-item"><a class="page-link" href="index.php">Primero</a></li>                                                              
+
+                                  <!--Arrow left-->
+                                  <li class="page-item">
+                                      <a class="page-link" aria-label="Previous" href="?pagina=<?php echo $pagina - 1 ?>">
+                                          <span aria-hidden="true">&laquo;</span>
+                                          <span class="sr-only">Previous</span>
+                                      </a>
+                                  </li>
+
+                                <?php endif ?>
+
+                                <?php 
+
+                                for ($i=1; $i <= $numeroPaginas; $i++) {                                                                    
+
+                                  if($pagina == $i){
+                                    echo "<li class='page-item active'><a class='page-link' href='?pagina=$i'>$i</a></li>";
+                                  }else {
+                                    echo "<li class='page-item'><a class='page-link' href='?pagina=$i'>$i</a></li>";
+                                  }
+                                  
+                                }
+                                
+                                ?>
+
+                                <?php if($pagina == $numeroPaginas): ?>
+
+                                <!--Último-->
+                                <li class="page-item disabled"><a class="page-link">Último</a></li>
 
                                 <!--Arrow right-->
-                                <li class="page-item">
+                                <li class="page-item disabled">
                                     <a class="page-link" aria-label="Next">
                                         <span aria-hidden="true">&raquo;</span>
                                         <span class="sr-only">Next</span>
                                     </a>
                                 </li>
 
-                                <!--Last-->
-                                <li class="page-item"><a class="page-link">Last</a></li>
+                                <?php else: ?>
+
+                                <!--Arrow right-->
+                                <li class="page-item">
+                                    <a class="page-link" aria-label="Next" href="?pagina= <?php echo $pagina + 1 ?>">
+                                        <span aria-hidden="true">&raquo;</span>
+                                        <span class="sr-only">Next</span>
+                                    </a>
+                                </li>
+
+                                <!--Último-->
+                                <li class="page-item"><a class="page-link" href="?pagina=<?php echo $numeroPaginas ?>">Último</a></li>
+                                
+
+                                <?php endif ?>
+
+                                <!--
+                                Numbers
+
+                                <li class="page-item active"><a class="page-link">1</a></li>
+                                <li class="page-item"><a class="page-link">2</a></li>
+                                <li class="page-item"><a class="page-link">3</a></li>
+                                <li class="page-item"><a class="page-link">4</a></li>   
+
+                                -->                                                        
 
                             </ul>
                         </nav>
