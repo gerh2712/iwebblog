@@ -139,10 +139,11 @@
                     <h2 class="display-2 gerh mt-3 mb-3">Últimas entradas</h2>
 
                     <!-- Ultimas entradas -->
-                    <div class="row mb-3 justify-content-between ">
 
-                      <section>
-                      
+                    <section class="row mb-3 justify-content-between articles">
+
+                    
+
                         <div class="col-6 mb-3">
   
                             <div class="card ">
@@ -347,9 +348,9 @@
   
                         </div>
 
-                      </section>
+                    
 
-                    </div>
+                    </section>
 
                     <!-- Pagination -->
                     <div class="row m-2 p-3">
@@ -374,8 +375,7 @@
                                 <li class="page-item active"><a class="page-link">1</a></li>
                                 <li class="page-item"><a class="page-link">2</a></li>
                                 <li class="page-item"><a class="page-link">3</a></li>
-                                <li class="page-item"><a class="page-link">4</a></li>
-                                <li class="page-item"><a class="page-link">5</a></li>
+                                <li class="page-item"><a class="page-link">4</a></li>                                
 
                                 <!--Arrow right-->
                                 <li class="page-item">
