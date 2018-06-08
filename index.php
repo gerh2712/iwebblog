@@ -73,7 +73,7 @@ if(isset($_POST['benviar']))  {
 
 try{
     //Establecer la conexión
-    $conexion = new PDO ('mysql:host=localhost;dbname=iwb_base','root','');
+    $conexion = new PDO ('mysql:host=localhost;dbname=iwb_database','root','');
 
     $pagina = isset($_GET['pagina']) ? (int)$_GET['pagina'] : 1;
 
