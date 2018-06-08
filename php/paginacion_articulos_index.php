@@ -1,8 +1,10 @@
 <?php 
 
+//---paginacion
+
 try{
     //Establecer la conexión
-    $conexion = new PDO ('mysql:host=localhost;dbname=iwb_articulos','root','');
+    $conexion = new PDO ('mysql:host=localhost;dbname=iwb_database','root','');
 
     $pagina = isset($_GET['pagina']) ? (int)$_GET['pagina'] : 1;
 
@@ -18,9 +20,16 @@ try{
     $articulos->execute();
     $articulos = $articulos->fetchAll();
 
-    if (!articulos) {
-        header('Location: ../index.php');
+    if (!$articulos) {
+        header('Location: index.php');
     }
+
+    $totalArticulos = $conexion->query('SELECT FOUND_ROWS() as total');
+    $totalArticulos = $totalArticulos->fetch()['total'];
+
+    $numeroPaginas = ceil($totalArticulos / $artPorPagina);
+
+    
 
 
 
