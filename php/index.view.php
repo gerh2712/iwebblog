@@ -8,11 +8,11 @@
     <!-- Font awesome MDB-->
     <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">-->
     <!-- Bootstrap Core -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css?ver=1.0">
     <!-- Material Design Bootstrap -->
-    <link href="css/mdb.min.css" rel="stylesheet">
+    <link href="css/mdb.min.css?ver=1.0" rel="stylesheet">
     <!-- Font Awesome 5 -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css?ver=1.0" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
     <!-- Your custom styles (optional) -->
     <link href="css/style.css" rel="stylesheet">
     <!-- Scroll Reveal -->
@@ -138,213 +138,144 @@
                     <!-- Titular Blog -->
                     <h2 class="display-2 gerh mt-3 mb-3">Últimas entradas</h2>
 
-                    <!-- Primer fila de 3 cartas -->
-                    <div class="row mb-3 justify-content-between ">
+                    <!-- Ultimas entradas -->
+                    <section class="row mb-3 justify-content-between articles">
 
-                      <div class="col-6 mb-3">
+                      <!-- Entradas dinámicas -->
 
-                          <div class="card ">
+                      <?php foreach ($articulos as $articulo): ?>
 
-                              <!-- Card image -->
-                              <div class="view overlay">
-                                <img class="card-img-top" src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(67).jpg" alt="Card image cap">
-                                <a href="#!">
-                                  <div class="mask rgba-white-slight"></div>
-                                </a>
-                              </div>
+                        <div class="col-6 mb-3">
+  
+                            <div class="card ">
+  
+                                <!-- Card image -->
+                                <div class="view overlay">
+                                  <img class="card-img-top" src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(67).jpg" alt="Card image cap">
+                                  <a href="#!">
+                                    <div class="mask rgba-white-slight"></div>
+                                  </a>
+                                </div>
+  
+                                <!-- Card content -->
+                                <div class="card-body">
+  
+                                  <!-- Title -->
+                                  <h4 class="card-title"><?php echo $articulo['titulo'] ?></h4>
+                                  <!-- Text -->
+                                  <p class="card-text text-justify"><?php echo $articulo['extracto']?></p>
+                                  <!-- Button -->
+                                  <button type="button" name="button" class="btn btn-primary btn-block">Botón</button>
+  
+                                </div>
+  
+                                <div class="card-footer">
+                                  <small class="text-muted">
+                                    <?php echo $articulo['id'] ?>
+                                  </small>
+                                </div>
+  
+                            </div>
+  
+                        </div> 
 
-                              <!-- Card content -->
-                              <div class="card-body">
+                      <?php endforeach ?>                                             
 
-                                <!-- Title -->
-                                <h4 class="card-title">Card title</h4>
-                                <!-- Text -->
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <!-- Button -->
-                                <button type="button" name="button" class="btn btn-primary btn-block">Botón</button>
+                    </section>
 
-                              </div>
+                    <!-- Pagination -->
+                    <div class="row m-2 p-3">
+                      <div class="col-12">
 
-                              <div class="card-footer">
-                                <small class="text-muted">
-                                  Pie de página
-                                </small>
-                              </div>
+                      <!--Pagination -->
+                        <nav aria-label="pagination example">
+                            <ul class="pagination pagination-lg pagination-circle pg-blue justify-content-center mb-0">
 
-                          </div>
+                                <?php if($pagina == 1): ?>
 
+                                  <!--First-->
+                                  <li class="page-item disabled"><a class="page-link">Primero</a></li>
+
+                                   <!--Arrow left-->
+                                  <li class="page-item disabled">
+                                      <a class="page-link" aria-label="Previous">
+                                          <span aria-hidden="true">&laquo;</span>
+                                          <span class="sr-only">Previous</span>
+                                      </a>
+                                  </li>
+
+                                <?php else: ?>
+
+                                  <!--First-->
+                                  <li class="page-item"><a class="page-link" href="index.php">Primero</a></li>                                                              
+
+                                  <!--Arrow left-->
+                                  <li class="page-item">
+                                      <a class="page-link" aria-label="Previous" href="?pagina=<?php echo $pagina - 1 ?>">
+                                          <span aria-hidden="true">&laquo;</span>
+                                          <span class="sr-only">Previous</span>
+                                      </a>
+                                  </li>
+
+                                <?php endif ?>
+
+                                <?php 
+
+                                for ($i=1; $i <= $numeroPaginas; $i++) {                                                                    
+
+                                  if($pagina == $i){
+                                    echo "<li class='page-item active'><a class='page-link' href='?pagina=$i'>$i</a></li>";
+                                  }else {
+                                    echo "<li class='page-item'><a class='page-link' href='?pagina=$i'>$i</a></li>";
+                                  }
+                                  
+                                }
+                                
+                                ?>
+
+                                <?php if($pagina == $numeroPaginas): ?>
+
+                                <!--Último-->
+                                <li class="page-item disabled"><a class="page-link">Último</a></li>
+
+                                <!--Arrow right-->
+                                <li class="page-item disabled">
+                                    <a class="page-link" aria-label="Next">
+                                        <span aria-hidden="true">&raquo;</span>
+                                        <span class="sr-only">Next</span>
+                                    </a>
+                                </li>
+
+                                <?php else: ?>
+
+                                <!--Arrow right-->
+                                <li class="page-item">
+                                    <a class="page-link" aria-label="Next" href="?pagina= <?php echo $pagina + 1 ?>">
+                                        <span aria-hidden="true">&raquo;</span>
+                                        <span class="sr-only">Next</span>
+                                    </a>
+                                </li>
+
+                                <!--Último-->
+                                <li class="page-item"><a class="page-link" href="?pagina=<?php echo $numeroPaginas ?>">Último</a></li>
+                                
+
+                                <?php endif ?>
+
+                                <!--
+                                Numbers
+
+                                <li class="page-item active"><a class="page-link">1</a></li>
+                                <li class="page-item"><a class="page-link">2</a></li>
+                                <li class="page-item"><a class="page-link">3</a></li>
+                                <li class="page-item"><a class="page-link">4</a></li>   
+
+                                -->                                                        
+
+                            </ul>
+                        </nav>
+                      
                       </div>
-
-                      <div class="col-6 mb-3">
-
-                          <div class="card ">
-
-                              <!-- Card image -->
-                              <div class="view overlay">
-                                <img class="card-img-top" src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(67).jpg" alt="Card image cap">
-                                <a href="#!">
-                                  <div class="mask rgba-white-slight"></div>
-                                </a>
-                              </div>
-
-                              <!-- Card content -->
-                              <div class="card-body">
-
-                                <!-- Title -->
-                                <h4 class="card-title">Card title</h4>
-                                <!-- Text -->
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <!-- Button -->
-                                <button type="button" name="button" class="btn btn-primary btn-block">Botón</button>
-
-                              </div>
-
-                              <div class="card-footer">
-                                <small class="text-muted">
-                                  Pie de página
-                                </small>
-                              </div>
-
-                          </div>
-
-                      </div>
-
-                      <div class="col-6 mb-3">
-
-                          <div class="card ">
-
-                              <!-- Card image -->
-                              <div class="view overlay">
-                                <img class="card-img-top" src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(67).jpg" alt="Card image cap">
-                                <a href="#!">
-                                  <div class="mask rgba-white-slight"></div>
-                                </a>
-                              </div>
-
-                              <!-- Card content -->
-                              <div class="card-body">
-
-                                <!-- Title -->
-                                <h4 class="card-title">Card title</h4>
-                                <!-- Text -->
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <!-- Button -->
-                                <button type="button" name="button" class="btn btn-primary btn-block">Botón</button>
-
-                              </div>
-
-                              <div class="card-footer">
-                                <small class="text-muted">
-                                  Pie de página
-                                </small>
-                              </div>
-
-                          </div>
-
-                      </div>
-
-                      <div class="col-6 mb-3">
-
-                          <div class="card ">
-
-                              <!-- Card image -->
-                              <div class="view overlay">
-                                <img class="card-img-top" src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(67).jpg" alt="Card image cap">
-                                <a href="#!">
-                                  <div class="mask rgba-white-slight"></div>
-                                </a>
-                              </div>
-
-                              <!-- Card content -->
-                              <div class="card-body">
-
-                                <!-- Title -->
-                                <h4 class="card-title">Card title</h4>
-                                <!-- Text -->
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <!-- Button -->
-                                <button type="button" name="button" class="btn btn-primary btn-block">Botón</button>
-
-                              </div>
-
-                              <div class="card-footer">
-                                <small class="text-muted">
-                                  Pie de página
-                                </small>
-                              </div>
-
-                          </div>
-
-                      </div>
-
-                      <div class="col-6 mb-3">
-
-                          <div class="card ">
-
-                              <!-- Card image -->
-                              <div class="view overlay">
-                                <img class="card-img-top" src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(67).jpg" alt="Card image cap">
-                                <a href="#!">
-                                  <div class="mask rgba-white-slight"></div>
-                                </a>
-                              </div>
-
-                              <!-- Card content -->
-                              <div class="card-body">
-
-                                <!-- Title -->
-                                <h4 class="card-title">Card title</h4>
-                                <!-- Text -->
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <!-- Button -->
-                                <button type="button" name="button" class="btn btn-primary btn-block">Botón</button>
-
-                              </div>
-
-                              <div class="card-footer">
-                                <small class="text-muted">
-                                  Pie de página
-                                </small>
-                              </div>
-
-                          </div>
-
-                      </div>
-
-                      <div class="col-6 mb-3">
-
-                          <div class="card ">
-
-                              <!-- Card image -->
-                              <div class="view overlay">
-                                <img class="card-img-top" src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(67).jpg" alt="Card image cap">
-                                <a href="#!">
-                                  <div class="mask rgba-white-slight"></div>
-                                </a>
-                              </div>
-
-                              <!-- Card content -->
-                              <div class="card-body">
-
-                                <!-- Title -->
-                                <h4 class="card-title">Card title</h4>
-                                <!-- Text -->
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <!-- Button -->
-                                <button type="button" name="button" class="btn btn-primary btn-block">Botón</button>
-
-                              </div>
-
-                              <div class="card-footer">
-                                <small class="text-muted">
-                                  Pie de página
-                                </small>
-                              </div>
-
-                          </div>
-
-                      </div>
-
                     </div>
 
                   </div>
@@ -396,9 +327,10 @@
               </div>
             </div>
 
-            <!-- Fila de cartas -->
+            <!-- Fila de cartas Cursos -->
             <div class="row info-color-dark justify-content-center pt-4 pb-4  px-3" id="cursos">
 
+                <!-- Cursos -->
                 <div class="col-12">
 
                   <!--Display-->
@@ -406,6 +338,7 @@
 
                 </div>
 
+                <!-- Card Deck -->
                 <div class="col-12">
 
                   <!-- Card deck -->
@@ -499,46 +432,71 @@
             <div class="row unique-color-dark p-3">
               <div class="col-12">
 
-            <!-- Material form contact -->
-            <div class="row m-3">
-                  <div class="col-12">
-                        <form class="m-3 p-3" action="php/contacto.php" method="post">
-                            <p class="h4 text-center text-light mb-4"> Contacto</p>
+              <!-- Material form contact -->
+              <div class="row m-3">
+                    <div class="col-12">
+                          <form class="m-3 p-3" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post">
+                              <p class="h4 text-center text-light mb-4"> Contacto</p>
 
-                            <!-- Nombre input text -->
-                            <div class="md-form">
-                                <i class="fa fa-user prefix white-text"></i>
-                                <input type="text" id="materialFormContactNameEx" class="form-control form-control-lg text-light" name="nombre">
-                                <label for="materialFormContactNameEx" class="white-text">Tu nombre</label>
+                              <!-- Nombre input text -->
+                              <div class="md-form">
+                                  <i class="fa fa-user prefix white-text"></i>
+                                  <input type="text" id="materialFormContactNameEx" class="form-control form-control-lg text-light" name="nombre" value="<?php if(!$var2 && isset($nombre)) {echo $nombre;} ?>">
+                                  <label for="materialFormContactNameEx" class="white-text">Tu nombre</label>
+                              </div>
+
+                              <!-- correo input email -->
+                              <div class="md-form">
+                                  <i class="fa fa-envelope prefix white-text"></i>
+                                  <input type="email" id="materialFormContactEmailEx" class="form-control form-control-lg text-light" name="email" value="<?php if(!$var2 && isset($email)) {echo $email;} ?>">
+                                  <label for="materialFormContactEmailEx" class="white-text">Tu email</label>
+                              </div>
+
+                              <!-- Asunto input subject -->
+                              <div class="md-form">
+                                  <i class="fa fa-tag prefix white-text"></i>
+                                  <input type="text" id="materialFormContactSubjectEx" class="form-control form-control-lg text-light" name="asunto" value="<?php if(!$var2 && isset($asunto)) {echo $asunto;} ?>">
+                                  <label for="materialFormContactSubjectEx" class="white-text">Asunto</label>
+                              </div>
+
+                              <!-- Mensaje textarea message -->
+                              <div class="md-form">
+                                  <i class="fa fa-pencil prefix white-text"></i>
+                                  <textarea type="text" id="materialFormContactMessageEx" class="form-control form-control-lg text-light md-textarea" rows="3" name="mensaje"><?php if(!$var2 && isset($mensaje)) {echo $mensaje;} ?></textarea>
+                                  <label for="materialFormContactMessageEx" class="white-text">Tu mensaje</label>
+                              </div>
+
+                              <!-- FIXME: Se pierden los estilos al pulsar enviar y se recarga la página ejecutando
+                              el código php pero se pierden los estilos css. Además tengo que indicar la dirección
+                              del archivo de lógica o no ocurre nada -->                                
+                              <div class="text-center mt-4">
+                                  <button class="btn btn-lg  btn-primary" type="submit" name="benviar">Enviar</button>
+                              </div>
+
+                          </form>                            
+
+                            <?php if(!empty($var1)): ?>
+
+                            <div class="alert  warning-color-dark  text-justify text-light">
+
+                              <p><strong>Aviso: </strong> <?php echo $var1 ?></p>
+
                             </div>
 
-                            <!-- correo input email -->
-                            <div class="md-form">
-                                <i class="fa fa-envelope prefix white-text"></i>
-                                <input type="email" id="materialFormContactEmailEx" class="form-control form-control-lg text-light" name="email">
-                                <label for="materialFormContactEmailEx" class="white-text">Tu email</label>
-                            </div>
+                            <?php elseif ($var2): ?>
+                            <div class="alert success-color text-justify text-light">
 
-                            <!-- Asunto input subject -->
-                            <div class="md-form">
-                                <i class="fa fa-tag prefix white-text"></i>
-                                <input type="text" id="materialFormContactSubjectEx" class="form-control form-control-lg text-light" name="asunto">
-                                <label for="materialFormContactSubjectEx" class="white-text">Asunto</label>
-                            </div>
+                              <p>Enviado Correctamente</p>                          
 
-                            <!-- Mensaje textarea message -->
-                            <div class="md-form">
-                                <i class="fa fa-pencil prefix white-text"></i>
-                                <textarea type="text" id="materialFormContactMessageEx" class="form-control form-control-lg text-light md-textarea" rows="3" name="mensaje"></textarea>
-                                <label for="materialFormContactMessageEx" class="white-text">Tu mensaje</label>
-                            </div>
+                              <button type="button" class="close" data-dismiss="alert" aria-label="Cerrar">
+                                <span aria-hidden="true">&times;</span>
+                              </button>
 
-                            <div class="text-center mt-4">
-                                <button class="btn btn-lg  btn-primary" type="submit">Enviar</button>
                             </div>
-                        </form>
-                  </div>
-            </div>
+                            <?php endif ?>
+
+                    </div>
+              </div>
 
                 <!--Otro row para poder posicionar el contenido en columnas -->
                 <div class="row mx-4 my-5  justify-content-around">
@@ -563,11 +521,14 @@
                                 <p class="h6 text-light"><i class="fab fa-html5 fa-2x mr-2"></i> HTML 5</p>
                           </div>
                           <div class="col-12 my-2">
+                                <p class="h6 text-light"><i class="fab fa-css3 fa-2x mr-2"> </i>  CSS 3</p>
+                          </div>
+                          <div class="col-12 my-2">
                                 <p class="h6 text-light"><i class="fab fa-js-square fa-2x mr-2"></i>  JavaScript</p>
                           </div>
                           <div class="col-12 my-2">
-                                <p class="h6 text-light"><i class="fab fa-css3 fa-2x mr-2"> </i>  CSS 3</p>
-                          </div>
+                                <p class="h6 text-light"><i class="fab fa-php fa-2x mr-2"></i>  PHP</p>
+                          </div>                          
                           <div class="col-12 my-2">
                                 <p class="h6 text-light"><i class="fab fa-font-awesome fa-2x mr-2"></i>  fontawesome</p>
                           </div>
@@ -581,16 +542,16 @@
                     <!-- Otro row para poner los íconos inline -->
                     <div class="row my-4 py-3 align-center">
                       <div class="col">
-                          <a href=""><i class="fab fa-facebook-f fa-2x text-light"></i></a>
+                          <a href=""><i class="fab fa-facebook-f fa-2x text-light hoverable"></i></a>
                       </div>
                       <div class="col">
-                          <a href=""><i class="fab fa-twitter fa-2x text-light" aria-hidden="true"></i></a>
+                          <a href=""><i class="fab fa-twitter fa-2x text-light hoverable" aria-hidden="true"></i></a>
                       </div>
                       <div class="col">
-                          <a href=""><i class="fab fa-youtube fa-2x text-light" aria-hidden="true"></i></a>
+                          <a href=""><i class="fab fa-youtube fa-2x text-light hoverable" aria-hidden="true"></i></a>
                       </div>
                       <div class="col">
-                          <a href=""><i class="fab fa-github-square fa-2x text-light" aria-hidden="true"></i></a>
+                          <a href=""><i class="fab fa-github-square fa-2x text-light hoverable" aria-hidden="true"></i></a>
                       </div>
                     </div>
                   </div>
