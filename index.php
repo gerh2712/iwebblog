@@ -4,8 +4,14 @@
 //El orden de los requires es importante, poniendo siempre el index.view.php al final
 //No es necesario hacer dentro de los archivos externos referencias al index.php como ../index.php
 
-//--requieres
+//--Session
+if (isset($_SESSION['usuario'])) {
+    header 'Location: php/usuario.php';
+}else {
+    header 'Location: views_php/usuario.view.php';
+}
 
+// requires
 //Validacion del contacto en la página principal
 require 'php/validacion_contacto.php';
 
@@ -13,7 +19,7 @@ require 'php/validacion_contacto.php';
 require 'php/paginacion_articulos_index.php';
 
 //Vista principal
-require 'php/index.view.php';
+require 'views_php/index.view.php';
 
 
 
