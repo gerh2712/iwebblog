@@ -15,7 +15,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     //Asegurando contraseña
     $contraseña = hash('sha512', $contraseña);
 
-    echo $usuario . $email . $email2 . $contraseña;
+    //echo $usuario . $email . $email2 . $contraseña;
 
     $errores = '';
 
@@ -60,12 +60,20 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     }
 
-    if ($errores = '') {
-        $statement = $conexion->prepare('INSERT INTO usuarios_login (id, usuario, contraseña, email) VALUES(null, :usuario, :contraseña, :email)');
-        $statement->execute(array(':usuario' => $usuario, ':contraseña' => $contraseña, 'email' => $email));
+    if ($errores == '') {
+        
+        $conexion = new PDO('mysql:host=localhost;dbname=iwb_database;charset=utf8','root','');
+        $statement = $conexion->prepare('INSERT INTO usuarios_login (id, usuario, pass, mail) VALUES(null, :usuario, :pass, :mail)');
+        $statement->execute(array(  
+            ':usuario'=>$usuario,
+            ':pass'=>$contraseña,
+            ':mail'=>$email
+        ));
 
-        header('Location: ../index.php');
+        echo 'Hola Mundo';
+    
     }
+   
     
 }
 
