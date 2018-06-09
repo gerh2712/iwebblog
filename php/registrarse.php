@@ -29,7 +29,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }else {
         //Validación de conexión, ejecución
         try{
-            $conexion = new PDO('mysql:host=localhost;dbname=iwb_database','root','');
+            $conexion = new PDO('mysql:host=localhost;dbname=iwb_database;charset=utf8','root','');
         }catch(PDOExceeption $e){
             echo "Error: " . $e->getMessage();
         }
