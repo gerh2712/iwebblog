@@ -12,6 +12,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $email = $_POST['email'];
     $email2 = $_POST['email2'];
     $contraseña = $_POST['contraseña'];
+    //Asegurando contraseña
+    $contraseña = hash('sha512', $contraseña);
 
     echo $usuario . $email . $email2 . $contraseña;
 
@@ -45,9 +47,24 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     <strong>Aviso: </strong> El usuario ya existe.                       
 
                 </div>";
+        }        
+        
+        if ($email != $email2) {
+            $errores .= 
+                "<div class='alert  danger-color-dark  text-justify text-light'>
+
+                    <strong>Aviso: </strong> Los emails son diferentes                       
+
+                </div>";
         }
 
+    }
 
+    if ($errores = '') {
+        $statement = $conexion->prepare('INSERT INTO usuarios_login (id, usuario, contraseña, email) VALUES(null, :usuario, :contraseña, :email)');
+        $statement->execute(array(':usuario' => $usuario, ':contraseña' => $contraseña, 'email' => $email));
+
+        header('Location: ../index.php');
     }
     
 }
