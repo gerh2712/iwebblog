@@ -169,7 +169,7 @@
                     <div class="row">
 
                         <div class="col-5">
-                            <p class="mb-0 display-3">Resgistrarse</p>
+                            <p class="mb-0 display-3">Registrarse</p>
                         </div>                    
                         <div class="col-7">
                             <div class="row">
@@ -189,10 +189,10 @@
 
                         <!-- Material form register -->
                         <div class="col-12">
-                            <form>                            
+                            <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post" name="login">                            
     
                                 <!-- Material input text -->
-                                <div class="md-form" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post" name="login">
+                                <div class="md-form">
                                     <i class="fa fa-user prefix grey-text"></i>
                                     <input type="text" id="materialFormRegisterNameEx" class="form-control" name="usuario">
                                     <label for="materialFormRegisterNameEx">Tu nombre</label>
@@ -218,6 +218,14 @@
                                     <input type="password" id="materialFormRegisterPasswordEx" class="form-control" name="contraseña">
                                     <label for="materialFormRegisterPasswordEx">Tu contraseña</label>
                                 </div>
+
+                                <?PHP
+
+                                if (!empty($errores)) {
+                                    echo $errores;
+                                }
+                                
+                                ?>
     
                                 <div class="text-center mt-4">
                                     <button class="btn btn-danger" type="submit">Registrarse</button>
