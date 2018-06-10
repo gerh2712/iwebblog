@@ -9,20 +9,26 @@
 session_start();
 
 if (isset($_SESSION['usuario'])) {
-    //header('Location: index.php');
+    
+    // requires
+    
+    //Validacion del contacto en la página principal
+    require 'php/validacion_contacto.php';
+
+    //Paginación y obtención de los artículos en la página principal
+    require 'php/paginacion_articulos_index.php';
+
+    //Vista principal
+    
+    require 'views_php/index.view.php';
+
 }else {
+
     header('Location: php/registrarse.php');
+    
 }
 
-// requires
-//Validacion del contacto en la página principal
-require 'php/validacion_contacto.php';
 
-//Paginación y obtención de los artículos en la página principal
-require 'php/paginacion_articulos_index.php';
-
-//Vista principal
-require 'views_php/index.view.php';
 
 
 
