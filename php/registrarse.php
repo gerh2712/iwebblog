@@ -83,7 +83,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     
     $usuario_login = filter_var($_POST['usuario_login'], FILTER_SANITIZE_STRING);
     $password_login = $_POST['password_login'];
-    $password_login = hash('sha512', $password_login);
+    //$password_login = hash('sha512', $password_login);
     echo "<br>" . $usuario_login . "<br>" . $password_login;
 
     try {
@@ -93,7 +93,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 
     $statement = $conexion->prepare( 
-        'SELECT FROM usuarios_login WHERE usuario = :usuario_login AND pass = :password_login'
+        'SELECT * FROM usuarios_login WHERE usuario = :usuario_login AND pass = :password_login'
     );
     $statement->execute(
         array(
