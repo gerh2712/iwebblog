@@ -159,7 +159,7 @@
 
                                     </div>
                                     <div class="modal-footer d-flex justify-content-center">
-                                        <button class="btn btn-default" type="submit">Acceder</button>
+                                        <button class="btn btn-default" type="submit" name="submit_login">Acceder</button>
                                     </div>
                                 </form>
                             </div>
@@ -229,7 +229,7 @@
                                 ?>
     
                                 <div class="text-center mt-4">
-                                    <button class="btn btn-danger" type="submit">Registrarse</button>
+                                    <button class="btn btn-danger" type="submit" name="submit_registro">Registrarse</button>
                                 </div>
                             </form>
                         </div>
