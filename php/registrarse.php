@@ -75,10 +75,10 @@ if (isset($_SESSION['usuario'])) {
     }
    
     
-}
-*/
-//LOGIN
+}*/
 
+
+//LOGIN
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     
     $usuario_login = filter_var($_POST['usuario_login'], FILTER_SANITIZE_STRING);
