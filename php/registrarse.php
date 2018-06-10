@@ -7,7 +7,7 @@ if (isset($_SESSION['usuario'])) {
 }
 
 //Guardando datos del formulario en variables
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+/*if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $usuario = filter_var($_POST['usuario'], FILTER_SANITIZE_STRING);
     $email = $_POST['email'];
     $email2 = $_POST['email2'];
@@ -75,6 +75,36 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
    
     
+}
+*/
+//LOGIN
+
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    
+    $usuario_login = filter_var($_POST['usuario_login'], FILTER_SANITIZE_STRING);
+    $password_login = $_POST['password_login'];
+    $password_login = hash('sha512', $password_login);
+    echo "<br>" . $usuario_login . "<br>" . $password_login;
+
+    try {
+        $conexion = new PDO('mysql:host=localhost;dbname=iwb_database;charset=utf8', 'root', '');
+    }catch(PDOException $e){
+        echo "Error: " . $e->getMessage();
+    }
+
+    $statement = $conexion->prepare( 
+        'SELECT FROM usuarios_login WHERE usuario = :usuario_login AND pass = :password_login'
+    );
+    $statement->execute(
+        array(
+        ':usuario_login'=>$usuario_login,        
+        ':password_login'=>$password_login
+        )
+    );
+    $coincidencia = $statement->fetch();
+    echo '<br>';
+    var_dump($coincidencia);
+    echo '<br>' . 'Se ha ejecutado';
 }
 
 //requires

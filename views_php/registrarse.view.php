@@ -112,11 +112,9 @@
 
                   <div class="col">
 
-                    <div class="alert  info-color-dark  text-justify text-light">
+                    <div class="alert  primary-color-dark  text-justify text-light">
 
-                        <strong>Aviso: </strong> La página web está en desarrollo, probablemente
-                        los aspectos de la misma se modifiquen constantemente. Por favor, deja
-                        tus comentarios en nuestras Redes Sociales.
+                        <strong class="h6">Aviso: </strong> La página web está en desarrollo, los aspectos de la misma se modifican constantemente.
 
                         <button type="button" class="close" data-dismiss="alert" aria-label="Cerrar">
                             <span aria-hidden="true">&times;</span>
@@ -134,6 +132,7 @@
                   <!-- MAIN -->                  
                   <div class="col-8 mb-3 ml-3">
 
+
                     <!-- Modal iniciar sesión -->
                     <div class="modal fade" id="modalIniciarSesion" tabindex="-1" role="dialog" aria-labelledby="modalIniciarSesion" aria-hidden="true">
                         <div class="modal-dialog" role="document">
@@ -144,26 +143,28 @@
                                         <span aria-hidden="true">&times;</span>
                                     </button>
                                 </div>
-                                <div class="modal-body mx-3">
-                                    <div class="md-form mb-5">
-                                        <i class="fa fa-envelope prefix grey-text"></i>
-                                        <input type="email" id="defaultForm-email" class="form-control validate">
-                                        <label data-error="wrong" data-success="right" for="defaultForm-email">Tu email</label>
-                                    </div>
+                                <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post">
+                                    <div class="modal-body mx-3">
+                                        <div class="md-form mb-5">
+                                            <i class="fa fa-envelope prefix grey-text"></i>
+                                            <input type="text" id="defaultForm-email" class="form-control validate" name="usuario_login">
+                                            <label data-error="wrong" data-success="right" for="defaultForm-email">Usuario o email</label>
+                                        </div>
 
-                                    <div class="md-form mb-4">
-                                        <i class="fa fa-lock prefix grey-text"></i>
-                                        <input type="password" id="defaultForm-pass" class="form-control validate">
-                                        <label data-error="wrong" data-success="right" for="defaultForm-pass">Tu contraseña</label>
-                                    </div>
+                                        <div class="md-form mb-4">
+                                            <i class="fa fa-lock prefix grey-text"></i>
+                                            <input type="password" id="defaultForm-pass" class="form-control validate" name="password_login">
+                                            <label data-error="wrong" data-success="right" for="defaultForm-pass">Tu contraseña</label>
+                                        </div>
 
-                                </div>
-                                <div class="modal-footer d-flex justify-content-center">
-                                    <button class="btn btn-default">Login</button>
-                                </div>
+                                    </div>
+                                    <div class="modal-footer d-flex justify-content-center">
+                                        <button class="btn btn-default" type="submit">Acceder</button>
+                                    </div>
+                                </form>
                             </div>
                         </div>
-                    </div>                  
+                    </div>  
 
                     <!-- Titular Registro -->
                     <div class="row">
