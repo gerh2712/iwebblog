@@ -83,7 +83,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     
     $usuario_login = filter_var($_POST['usuario_login'], FILTER_SANITIZE_STRING);
     $password_login = $_POST['password_login'];
-    //$password_login = hash('sha512', $password_login);
+    $password_login = hash('sha512', $password_login);
     echo "<br>" . $usuario_login . "<br>" . $password_login;
 
     try {
@@ -101,10 +101,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         ':password_login'=>$password_login
         )
     );
-    $coincidencia = $statement->fetch();
-    echo '<br>';
+    $coincidencia = $statement->fetch();    
     var_dump($coincidencia);
-    echo '<br>' . 'Se ha ejecutado';
+    
+    if ($coincidencia !== false) {
+        $_SESSION['usuario'] = $usuario_login;
+        header('Location: ../index.php');
+    }
 }
 
 //requires

@@ -9,7 +9,7 @@
 session_start();
 
 if (isset($_SESSION['usuario'])) {
-    header('Location: index.php');
+    //header('Location: index.php');
 }else {
     header('Location: php/registrarse.php');
 }
