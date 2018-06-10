@@ -74,6 +74,9 @@
                                     <li>
                                         <a href="" class="nav-link"><i class="fab fa-github-square fa-lg text-light m-2" aria-hidden="true"></i></a>
                                     </li>
+                                    <li>
+                                        <a href="php/cerrar_sesion.php" class="nav-link">Cerrar Sesión</a>
+                                    </li>
                                 </ul>
                             </div>
                         </nav>
