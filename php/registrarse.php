@@ -97,7 +97,7 @@ if (isset($_SESSION['usuario'])) {
             }
 
             $statement = $conexion->prepare( 
-                'SELECT * FROM usuarios_login WHERE usuario = :usuario_login AND pass = :password_login'
+                'SELECT * FROM usuarios_login WHERE usuario = :usuario_login OR mail = :usuario_login AND pass = :password_login'
             );
             $statement->execute(
                 array(
