@@ -1,24 +1,19 @@
 <?php 
 
-//---paginacion
+//Requires esenciales
+require 'config.php';
+require 'funciones.php';
 
+//---paginacion
 try{
     //Establecer la conexión
-    $conexion = new PDO ('mysql:host=localhost;dbname=iwb_database','root','');
+    $conexion = conexion($bd_config);
 
-    $pagina = isset($_GET['pagina']) ? (int)$_GET['pagina'] : 1;
+    $pagina = paginaActual();
 
     $artPorPagina = 6;
 
-    $inicioMostrar = ($pagina > 1) ? ($pagina * $artPorPagina - $artPorPagina) : 0;
-
-    $articulos = $conexion->prepare("
-        SELECT SQL_CALC_FOUND_ROWS * FROM articulos
-        LIMIT $inicioMostrar, $artPorPagina
-    ");
-
-    $articulos->execute();
-    $articulos = $articulos->fetchAll();
+    $articulos = obtenerArticulos($conexion, $blog_index_config['artPorPagina']);  
 
     if (!$articulos) {
         header('Location: index.php');
