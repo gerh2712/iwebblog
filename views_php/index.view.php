@@ -100,11 +100,9 @@
 
                   <div class="col">
 
-                    <div class="alert  info-color-dark  text-justify text-light">
+                    <div class="alert  primary-color-dark  text-justify text-light">
 
-                        <strong>Aviso: </strong> La página web está en desarrollo, probablemente
-                        los aspectos de la misma se modifiquen constantemente. Por favor, deja
-                        tus comentarios en nuestras Redes Sociales.
+                        <strong class="h6">Aviso: </strong> La página web está en desarrollo, los aspectos de la misma se modifican constantemente.
 
                         <button type="button" class="close" data-dismiss="alert" aria-label="Cerrar">
                             <span aria-hidden="true">&times;</span>
@@ -148,7 +146,7 @@
                                 <div class="card-body">
   
                                   <!-- Title -->
-                                  <h4 class="card-title"><?php echo $articulo['titulo'] ?></h4>
+                                  <h4 class="card-title"><a href="php/entrada.php?id=<?php echo $articulo['id'] ?>"><?php echo $articulo['titulo'] ?></a></h4>
                                   <!-- Text -->
                                   <p class="card-text text-justify"><?php echo $articulo['extracto']?></p>
                                   <!-- Button -->
@@ -157,9 +155,22 @@
                                 </div>
   
                                 <div class="card-footer">
-                                  <small class="text-muted">
-                                    <?php echo $articulo['id'] ?>
-                                  </small>
+
+                                  <div class="row justify-content-between">
+                                    <div class="col-6">
+                                      <small class="text-muted">
+                                        <?php echo $articulo['id'] ?>
+                                      </small>
+                                    </div>
+                                    <div class="col-3">
+                                      <small class="">
+                                        <p class="text-muted text-right mb-0">
+                                          Fecha
+                                        </p>
+                                      </small>
+                                    </div>
+                                  </div>
+
                                 </div>
   
                             </div>
