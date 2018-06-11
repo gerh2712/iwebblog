@@ -39,7 +39,7 @@
 
                     <!--Main Navigation-->
                         <nav class="navbar fixed-top navbar-expand-lg navbar-dark unique-color-dark scrolling-navbar">
-                            <a class="navbar-brand" href="index.html"><strong>devhub</strong></a>
+                            <a class="navbar-brand" href="index.html"><strong>iwebblog</strong></a>
                             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                                 <span class="navbar-toggler-icon"></span>
                             </button>
@@ -248,17 +248,7 @@
                                 <li class="page-item"><a class="page-link" href="?pagina=<?php echo $numeroPaginas ?>">Último</a></li>
                                 
 
-                                <?php endif ?>
-
-                                <!--
-                                Numbers
-
-                                <li class="page-item active"><a class="page-link">1</a></li>
-                                <li class="page-item"><a class="page-link">2</a></li>
-                                <li class="page-item"><a class="page-link">3</a></li>
-                                <li class="page-item"><a class="page-link">4</a></li>   
-
-                                -->                                                        
+                                <?php endif ?>                                                                               
 
                             </ul>
                         </nav>
@@ -269,11 +259,7 @@
                   </main>
 
 
-                  <!-- ASIDE -->
-                  <!-- Par de carta una por arriba de la otra para mostrar información relacionada
-                  y anuncios publicitarios para monetizar -->
-                  <!-- TODO: Cambiar el contenido de las cards -->
-                  <!-- TODO: Hacer que las cards sean estáticas -->
+                  <!-- ASIDE -->                  
                   <aside class="col-3 mb-3 mr-3">
 
                     <div class="row mb-3">
@@ -420,8 +406,8 @@
             <footer class="row unique-color-dark p-3">
               <div class="col-12">
 
-              <!-- Material form contact -->
-              <section class="row m-3">
+                <!-- Material form contact -->
+                <section class="row m-3">
                     <div class="col-12">
                           <form class="m-3 p-3" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post">
                               <p class="h4 text-center text-light mb-4"> Contacto</p>
@@ -484,7 +470,7 @@
                             <?php endif ?>
 
                     </div>
-              </section>
+                </section>
 
                 <!--Otro row para poder posicionar el contenido en columnas -->
                 <div class="row mx-4 my-5  justify-content-around">
