@@ -156,7 +156,7 @@
                         </div>
                     </div>                  
 
-                    <!-- Formulario de registro -->
+                    <!-- Entrada del artículo -->
                     <main class="row mb-3 justify-content-between articles">                           
 
                         <!-- Entrada -->
@@ -165,7 +165,7 @@
 
                             <!-- Card image -->
                             <div class="view view-cascade overlay">
-                            <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Slides/img%20(70).jpg" alt="Card image cap">
+                            <img class="card-img-top" src="<?php /*Obtener imagen*/ ?>" alt="Card image cap">
                             <a href="#!">
                                 <div class="mask rgba-white-slight"></div>
                             </a>
@@ -175,18 +175,18 @@
                             <div class="card-body card-body-cascade text-center">
 
                             <!-- Title -->
-                            <h4 class="card-title"><strong>My adventure</strong></h4>
+                            <h4 class="card-title"><strong><?php /*Título dinámico*/ ?></strong></h4>
                             <!-- Subtitle -->
-                            <h6 class="font-weight-bold indigo-text py-2">Photography</h6>
+                            <!-- TODO: Cambiar por etiquetas -->
+                            <h6 class="font-weight-bold indigo-text py-2"><?php /* etiquetas */ ?></h6>
                             <!-- Text -->
-                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem perspiciatis voluptatum a, quo nobis, non commodi quia repellendus sequi nulla voluptatem dicta reprehenderit, placeat laborum ut beatae ullam suscipit veniam.
-                            </p>
+                            <p class="card-text"><?php /* Contenido */</p>
 
-                            <!-- Linkedin -->
+                            <!-- Facebook -->
                             <a class="px-2 fa-lg li-ic"><i class="fa fa-linkedin"></i></a>
                             <!-- Twitter -->
                             <a class="px-2 fa-lg tw-ic"><i class="fa fa-twitter"></i></a>
-                            <!-- Dribbble -->
+                            <!-- Youtube -->
                             <a class="px-2 fa-lg fb-ic"><i class="fa fa-facebook"></i></a>
 
                             </div>

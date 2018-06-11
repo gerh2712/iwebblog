@@ -1,5 +1,9 @@
 <?php
 
+session_start();
+
+//TODO: Agregar sesiones cuando pueda ofrecer funciones adicionales
+
 
 
  //requires
