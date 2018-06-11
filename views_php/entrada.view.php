@@ -161,7 +161,7 @@
 
                         <!-- Entrada -->
                         <!-- Card -->
-                        <div class="card card-cascade wider reverse">
+                        <div class="col-12 card card-cascade wider reverse">
 
                             <!-- Card image -->
                             <div class="view view-cascade overlay">
@@ -180,7 +180,7 @@
                             <!-- TODO: Cambiar por etiquetas -->
                             <h6 class="font-weight-bold indigo-text py-2"><?php /* etiquetas */ ?></h6>
                             <!-- Text -->
-                            <p class="card-text"><?php /* Contenido */</p>
+                            <p class="card-text"><?php /* Contenido */ ?></p>
 
                             <!-- Facebook -->
                             <a class="px-2 fa-lg li-ic"><i class="fa fa-linkedin"></i></a>
