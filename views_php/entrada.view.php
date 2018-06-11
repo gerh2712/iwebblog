@@ -17,7 +17,7 @@
     <link href="../css/style.css" rel="stylesheet">
     <!-- Scroll Reveal -->
     <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
-    <title>Registrarse - iwebblog</title>
+    <title><?php echo 'Título dinámico' ?> - iwebblog</title>
 </head>
 
 <body style="background: #f2f2f2;">
@@ -154,64 +154,43 @@
                                 </form>
                             </div>
                         </div>
-                    </div>  
-
-                    <!-- Titular Registro -->
-                    <div class="row">
-
-                        <div class="col-12">
-                            <p class="mb-0 display-3">Registrarse</p>
-                        </div>                                           
-
-                    </div>
+                    </div>                  
 
                     <!-- Formulario de registro -->
                     <main class="row mb-3 justify-content-between articles">                           
 
-                        <!-- Material form register -->
-                        <div class="col-12">
-                            <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post" name="login">                            
-    
-                                <!-- Material input text -->
-                                <div class="md-form">
-                                    <i class="fa fa-user prefix grey-text"></i>
-                                    <input type="text" id="materialFormRegisterNameEx" class="form-control" name="usuario">
-                                    <label for="materialFormRegisterNameEx">Tu nombre</label>
-                                </div>
-    
-                                <!-- Material input email -->
-                                <div class="md-form">
-                                    <i class="fa fa-envelope prefix grey-text"></i>
-                                    <input type="email" id="materialFormRegisterEmailEx" class="form-control" name="email">
-                                    <label for="materialFormRegisterEmailEx">Tu email</label>
-                                </div>
-    
-                                <!-- Material input email -->
-                                <div class="md-form">
-                                    <i class="fa fa-exclamation-triangle prefix grey-text"></i>
-                                    <input type="email" id="materialFormRegisterConfirmEx" class="form-control" name="email2">
-                                    <label for="materialFormRegisterConfirmEx">Confirma Tu email</label>
-                                </div>
-    
-                                <!-- Material input password -->
-                                <div class="md-form">
-                                    <i class="fa fa-lock prefix grey-text"></i>
-                                    <input type="password" id="materialFormRegisterPasswordEx" class="form-control" name="contraseña">
-                                    <label for="materialFormRegisterPasswordEx">Tu contraseña</label>
-                                </div>
+                        <!-- Entrada -->
+                        <!-- Card -->
+                        <div class="card card-cascade wider reverse">
 
-                                <?PHP
+                            <!-- Card image -->
+                            <div class="view view-cascade overlay">
+                            <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Slides/img%20(70).jpg" alt="Card image cap">
+                            <a href="#!">
+                                <div class="mask rgba-white-slight"></div>
+                            </a>
+                            </div>
 
-                                if (!empty($errores)) {
-                                    echo $errores;
-                                }
-                                
-                                ?>
-    
-                                <div class="text-center mt-4">
-                                    <button class="btn btn-danger" type="submit" name="submit_registro">Registrarse</button>
-                                </div>
-                            </form>
+                            <!-- Card content -->
+                            <div class="card-body card-body-cascade text-center">
+
+                            <!-- Title -->
+                            <h4 class="card-title"><strong>My adventure</strong></h4>
+                            <!-- Subtitle -->
+                            <h6 class="font-weight-bold indigo-text py-2">Photography</h6>
+                            <!-- Text -->
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem perspiciatis voluptatum a, quo nobis, non commodi quia repellendus sequi nulla voluptatem dicta reprehenderit, placeat laborum ut beatae ullam suscipit veniam.
+                            </p>
+
+                            <!-- Linkedin -->
+                            <a class="px-2 fa-lg li-ic"><i class="fa fa-linkedin"></i></a>
+                            <!-- Twitter -->
+                            <a class="px-2 fa-lg tw-ic"><i class="fa fa-twitter"></i></a>
+                            <!-- Dribbble -->
+                            <a class="px-2 fa-lg fb-ic"><i class="fa fa-facebook"></i></a>
+
+                            </div>
+
                         </div>
                    
 
