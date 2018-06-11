@@ -139,10 +139,9 @@
   
                                 <!-- Card image -->
                                 <div class="view overlay">
-                                  <img class="card-img-top" src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(67).jpg" alt="Card image cap">
+                                  <img class="card-img-top" src="<?php echo 'img/articulos/' . $articulo['img_principal']; ?>" alt="Card image cap">
                                   <a href="#!">
-                                    <div class="mask rgba-white-slight"></div>
-                                  </a>
+                                    <div class="mask rgba-white-slight"></div>                                
                                 </div>
   
                                 <!-- Card content -->
@@ -153,7 +152,7 @@
                                   <!-- Text -->
                                   <p class="card-text text-justify"><?php echo $articulo['extracto']?></p>
                                   <!-- Button -->
-                                  <button type="button" name="button" class="btn btn-primary btn-block">Botón</button>
+                                  <a class="btn btn-primary btn-block" href="php/entrada.php?id=<?php echo $articulo['id'] ?>">Ir a la nota</a>
   
                                 </div>
   

@@ -9,4 +9,5 @@ $blog_index_config = array(
     'carpetaImagenes' => 'img/articulos'
 );
 
+
 ?>
