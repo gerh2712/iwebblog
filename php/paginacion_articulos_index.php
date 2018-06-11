@@ -9,20 +9,18 @@ try{
     //Establecer la conexión
     $conexion = conexion($bd_config);
 
-    $pagina = paginaActual();
-
-    $artPorPagina = 6;
+    $pagina = paginaActual();    
 
     $articulos = obtenerArticulos($conexion, $blog_index_config['artPorPagina']);  
 
     if (!$articulos) {
-        header('Location: index.php');
+        header('Location: php/error.php');
     }
 
     $totalArticulos = $conexion->query('SELECT FOUND_ROWS() as total');
     $totalArticulos = $totalArticulos->fetch()['total'];
 
-    $numeroPaginas = ceil($totalArticulos / $artPorPagina);
+    $numeroPaginas = ceil($totalArticulos / $blog_index_config['artPorPagina']);
 
     
 
