@@ -28,7 +28,7 @@
           <div class="col-12">
 
             <!-- Header -->
-            <div class="row">
+            <header class="row">
 
               <div class="col-12">
 
@@ -37,12 +37,9 @@
                   <!--Barra de navegación -->
                   <div class="col-12 mt-3">
 
-
                     <!--Main Navigation-->
-
-
-                        <nav class="navbar fixed-top navbar-expand-lg navbar-dark unique-color scrolling-navbar">
-                            <a class="navbar-brand" href="index.html"><strong>iwebblog</strong></a>
+                        <nav class="navbar fixed-top navbar-expand-lg navbar-dark unique-color-dark scrolling-navbar">
+                            <a class="navbar-brand" href="index.html"><strong>devhub</strong></a>
                             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                                 <span class="navbar-toggler-icon"></span>
                             </button>
@@ -61,21 +58,9 @@
                                         <a class="nav-link" href="#about">Sobre Nosotros</a>
                                     </li>
                                 </ul>
-                                <ul class="navbar-nav nav-flex-icons">
+                                <ul class="navbar-nav nav-flex-icons">                                   
                                     <li class="nav-item">
-                                        <a href="" class="nav-link"><i class="fab fa-facebook-f fa-lg text-light m-2"></i></a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="" class="nav-link"><i class="fab fa-twitter fa-lg text-light m-2" aria-hidden="true"></i></a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="" class="nav-link"><i class="fab fa-youtube fa-lg text-light m-2" aria-hidden="true"></i></a>
-                                    </li>
-                                    <li>
-                                        <a href="" class="nav-link"><i class="fab fa-github-square fa-lg text-light m-2" aria-hidden="true"></i></a>
-                                    </li>
-                                    <li>
-                                        <a href="php/cerrar_sesion.php" class="nav-link text-light">Cerrar Sesión</a>
+                                        <a href="php/cerrar_sesion.php" class="btn btn-primary">Cerrar Sesión</a>
                                     </li>
                                 </ul>
                             </div>
@@ -104,10 +89,10 @@
 
               </div>
 
-            </div>
+            </header>
 
             <!-- Contenido principal -->
-            <div class="row mt-3 py-2 px-0">
+            <section class="row mt-3 py-2 px-0">
               <div class="col-12">
 
                 <!-- Alert -->
@@ -136,7 +121,7 @@
 
                   <!-- MAIN -->
                   <!-- Grupo de cartas para mostrar las entradas -->
-                  <div class="col-8 mb-3 ml-3">
+                  <main class="col-8 mb-3 ml-3">
 
                     <!-- Titular Blog -->
                     <h2 class="display-2 gerh mt-3 mb-3">Últimas entradas</h2>
@@ -281,7 +266,7 @@
                       </div>
                     </div>
 
-                  </div>
+                  </main>
 
 
                   <!-- ASIDE -->
@@ -289,7 +274,7 @@
                   y anuncios publicitarios para monetizar -->
                   <!-- TODO: Cambiar el contenido de las cards -->
                   <!-- TODO: Hacer que las cards sean estáticas -->
-                  <div class="col-3 mb-3 mr-3">
+                  <aside class="col-3 mb-3 mr-3">
 
                     <div class="row mb-3">
                       <div class="col">
@@ -323,15 +308,15 @@
                       </div>
                     </div>
 
-                  </div>
+                  </aside>
 
                 </div>
 
               </div>
-            </div>
+            </section>
 
             <!-- Fila de cartas Cursos -->
-            <div class="row info-color-dark justify-content-center pt-4 pb-4  px-3" id="cursos">
+            <section class="row primary-color-dark justify-content-center pt-4 pb-4  px-3" id="cursos">
 
                 <!-- Cursos -->
                 <div class="col-12">
@@ -429,14 +414,14 @@
                 <!-- Ver más cursos -->
                 <a href="" class="btn btn-danger btn-lg">Explorar más cursos</a>
 
-            </div>
+            </section>
 
             <!-- Contenedor del footer -->
-            <div class="row unique-color-dark p-3">
+            <footer class="row unique-color-dark p-3">
               <div class="col-12">
 
               <!-- Material form contact -->
-              <div class="row m-3">
+              <section class="row m-3">
                     <div class="col-12">
                           <form class="m-3 p-3" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post">
                               <p class="h4 text-center text-light mb-4"> Contacto</p>
@@ -499,20 +484,20 @@
                             <?php endif ?>
 
                     </div>
-              </div>
+              </section>
 
                 <!--Otro row para poder posicionar el contenido en columnas -->
                 <div class="row mx-4 my-5  justify-content-around">
 
                   <!-- Desarrollado por -->
-                  <div class="col-4 ">
+                  <section class="col-4 ">
                     <p class="h3 text-light">iwebblog</p>
                     <p class="h5 text-light mb-0 ">Desarrollado por <strong>Gerardo Hernández</strong></p>
                     <p class="text-light mt-3">Soy un desarrollador web en formación</p>
-                  </div>
+                  </section>
 
                   <!-- Hecho con -->
-                  <div class="col-3">
+                  <section class="col-3">
                     <div class="row">
                           <div class="col-12">
                                 <p class="h3 text-light">Hecho con <i class="far fa-heart"></i> y :</p>
@@ -536,11 +521,11 @@
                                 <p class="h6 text-light"><i class="fab fa-font-awesome fa-2x mr-2"></i>  fontawesome</p>
                           </div>
                     </div>
-                  </div>
+                  </section>
 
 
                   <!-- Redes Sociales -->
-                  <div class="col-4">
+                  <section class="col-4">
                     <p class="h3 text-light mb-3">Redes Sociales</p>
                     <!-- Otro row para poner los íconos inline -->
                     <div class="row my-4 py-3 align-center">
@@ -557,12 +542,12 @@
                           <a href=""><i class="fab fa-github-square fa-2x text-light hoverable" aria-hidden="true"></i></a>
                       </div>
                     </div>
-                  </div>
+                  </section>
 
                 </div>
 
               </div>
-            </div>
+            </footer>
 
           </div>
         </div>
