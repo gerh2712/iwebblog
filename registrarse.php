@@ -110,15 +110,15 @@ if (isset($_SESSION['usuario'])) {
             
             if ($coincidencia !== false) {
                 $_SESSION['usuario'] = $usuario_login;
-                header('Location: ../index.php');
+                header('Location: index.php');
             }
         }
 
     }
 
     //requires
-    require 'validacion_contacto.php';
-    require '../views_php/registrarse.view.php';    
+    require 'php/validacion_contacto.php';
+    require 'views_php/registrarse.view.php';    
 
 
 }

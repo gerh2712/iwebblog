@@ -24,7 +24,7 @@ if (isset($_SESSION['usuario'])) {
 
 }else {
 
-    header('Location: php/registrarse.php');
+    header('Location: registrarse.php');
     
 }
 

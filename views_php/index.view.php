@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -146,11 +146,11 @@
                                 <div class="card-body">
   
                                   <!-- Title -->
-                                  <h4 class="card-title"><a href="php/entrada.php?id=<?php echo $articulo['id'] ?>"><?php echo $articulo['titulo'] ?></a></h4>
+                                  <h4 class="card-title"><a href="entrada.php?id=<?php echo $articulo['id'] ?>"><?php echo $articulo['titulo'] ?></a></h4>
                                   <!-- Text -->
                                   <p class="card-text text-justify"><?php echo $articulo['extracto']?></p>
                                   <!-- Button -->
-                                  <a class="btn btn-primary btn-block" href="php/entrada.php?id=<?php echo $articulo['id'] ?>">Ir a la nota</a>
+                                  <a class="btn btn-primary btn-block" href="entrada.php?id=<?php echo $articulo['id'] ?>">Ir a la nota</a>
   
                                 </div>
   

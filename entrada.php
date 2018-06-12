@@ -2,8 +2,8 @@
 session_start();
 
 //requires esenciales
-require 'config.php';
-require 'funciones.php';
+require 'php/config.php';
+require 'php/funciones.php';
 
 //TODO: Agregar sesiones cuando pueda ofrecer funciones adicionales
 
@@ -28,7 +28,7 @@ if (!$entrada) {
 $entrada = $entrada[0];
 
  //requires
- require 'validacion_contacto.php';
- require '../views_php/entrada.view.php'; 
+ require 'php/validacion_contacto.php';
+ require 'views_php/entrada.view.php'; 
 
 ?>
