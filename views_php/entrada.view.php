@@ -102,7 +102,7 @@
 
                                             <!-- Card image -->
                                             <div class="view view-cascade overlay">
-                                            <img class="card-img-top" src="<?php echo '../img/articulos/' . $entrada['img_principal']; ?>" alt="Card image cap">
+                                            <img class="card-img-top" src="<?php echo 'img/articulos/' . $entrada['img_principal']; ?>" alt="Card image cap">
                                             <a href="#!">
                                                 <div class="mask rgba-white-slight"></div>
                                             </a>

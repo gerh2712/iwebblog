@@ -9,7 +9,7 @@
 
         <!--Main Navigation-->
             <nav class="navbar fixed-top navbar-expand-lg navbar-dark unique-color-dark scrolling-navbar">
-                <a class="navbar-brand" href="index.html"><strong>iwebblog</strong></a>
+                <a class="navbar-brand" href="index.php"><strong>iwebblog</strong></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -28,11 +28,33 @@
                             <a class="nav-link" href="#about">Sobre Nosotros</a>
                         </li>
                     </ul>
-                    <ul class="navbar-nav nav-flex-icons">                                   
-                        <li class="nav-item">
-                            <a href="php/cerrar_sesion.php" class="btn btn-primary">Cerrar Sesión</a>
-                        </li>
-                    </ul>
+
+                    <?php 
+                    
+                    if (isset($_SESSION['usuario'])) {
+                        
+                        echo
+                            "<ul class='navbar-nav nav-flex-icons'>                                   
+                                <li class='nav-item'>
+                                    <a href='php/cerrar_sesion.php' class='btn btn-primary'>Cerrar Sesión</a>
+                                </li>               
+                            </ul>"
+                        ;
+                    }elseif(!isset($_SESSION['usuario'])){
+                        
+                        echo
+
+                            "<ul class='navbar-nav nav-flex-icons'>                                   
+                                <li class='nav-item'>
+                                <button type='button' class='btn btn-primary' data-toggle='modal' data-target='#modalIniciarSesion'>Iniciar Sesión</button>
+                                </li>
+                            </ul>"
+                        ;
+
+                    }
+
+                    ?>
+
                 </div>
             </nav>
 
