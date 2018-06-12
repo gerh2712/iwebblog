@@ -17,7 +17,7 @@
     <link href="../css/style.css" rel="stylesheet">
     <!-- Scroll Reveal -->
     <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
-    <title><?php echo 'Título dinámico' ?> - iwebblog</title>
+    <title><?php echo $entrada['titulo']; ?> - iwebblog</title>
 </head>
 
 <body style="background: #f2f2f2;">
@@ -165,7 +165,7 @@
 
                             <!-- Card image -->
                             <div class="view view-cascade overlay">
-                            <img class="card-img-top" src="<?php /*Obtener imagen*/ ?>" alt="Card image cap">
+                            <img class="card-img-top" src="<?php echo '../img/articulos/' . $entrada['img_principal']; ?>" alt="Card image cap">
                             <a href="#!">
                                 <div class="mask rgba-white-slight"></div>
                             </a>
@@ -175,12 +175,12 @@
                             <div class="card-body card-body-cascade text-center">
 
                             <!-- Title -->
-                            <h4 class="card-title"><strong><?php /*Título dinámico*/ ?></strong></h4>
+                            <h4 class="card-title"><strong><?php echo $entrada['titulo']; ?></strong></h4>
                             <!-- Subtitle -->
                             <!-- TODO: Cambiar por etiquetas -->
-                            <h6 class="font-weight-bold indigo-text py-2"><?php /* etiquetas */ ?></h6>
+                            <h6 class="font-weight-bold indigo-text py-2"><?php echo $entrada['titulo']; ?></h6>
                             <!-- Text -->
-                            <p class="card-text"><?php /* Contenido */ ?></p>
+                            <p class="card-text"><?php echo $entrada['nota']; ?></p>
 
                             <!-- Facebook -->
                             <a class="px-2 fa-lg li-ic"><i class="fa fa-linkedin"></i></a>

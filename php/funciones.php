@@ -41,4 +41,35 @@ function obtenerArticulos($conexion, $artPorPagina){
 
 }
 
+function id_articulo($id){
+
+    return (int)limpiarDatos($id);
+
+}
+
+function obtenerArticulosId($conexion, $id){
+
+    $resultado = $conexion->query("SELECT * FROM articulos WHERE id = $id LIMIT 1");
+    $resultado = $resultado->fetchAll();
+    return ($resultado) ? $resultado : false;    
+
+}
+
+function fecha($fecha){
+
+    $time = strtotime($fecha);
+    $meses = ['enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio', 'julio', 'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre'];
+
+    $dia = date('d', $time);
+    $mes = date('m', $time -1);
+    $año = date('a', $time);
+
+    $fecha = "$dia de " . $meses[$mes] . " del $año";
+
+    return $fecha;
+
+    //encerrar el echo de la fecha en esta funcion
+
+}
+
 ?>
