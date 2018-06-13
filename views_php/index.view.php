@@ -1,24 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <!-- Font awesome MDB-->
-    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">-->
-    <!-- Bootstrap Core -->
-    <link rel="stylesheet" href="css/bootstrap.min.css?ver=1.0">
-    <!-- Material Design Bootstrap -->
-    <link href="css/mdb.min.css?ver=1.0" rel="stylesheet">
-    <!-- Font Awesome 5 -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css?ver=1.0" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
-    <!-- Your custom styles (optional) -->
-    <link href="css/style.css" rel="stylesheet">
-    <!-- Scroll Reveal -->
-    <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
-    <title>Inicio - iwebblog</title>
-</head>
+<?php require 'head.component.php'; ?>
 
 <body style="background: #f2f2f2;">
     <div class="container-fluid">
@@ -28,7 +11,7 @@
           <div class="col-12">
 
             <!-- Header -->
-            <?php require 'header.component.php'; ?>
+            <?php require 'header.component.php'; ?>    
 
             <!-- Contenido principal -->
             <section class="row mt-3 py-2 px-0">
@@ -37,7 +20,7 @@
                 <!-- Alert -->
                 <div class="row">
 
-                  <div class="col">
+                  <div class="col-12">
 
                     <div class="alert  primary-color-dark  text-justify text-light">
 
@@ -47,21 +30,22 @@
                             <span aria-hidden="true">&times;</span>
                         </button>
 
-                    </div>
+                    </div>                 
 
                   </div>
 
                 </div>
 
                 <!-- Contenedor del main y el aside -->
-                <div class="row justify-content-around">
+                <div class="row d-flex justify-content-around">
 
                   <!-- MAIN -->
                   <!-- Grupo de cartas para mostrar las entradas -->
-                  <main class="col-8 mb-3 ml-3">
+                  <main class="col-sm-12 col-md-12 col-lg-8 mb-3 ml-3">
 
                     <!-- Titular Blog -->
-                    <h2 class="display-2 gerh mt-3 mb-3">Últimas entradas</h2>
+                    <h2 class="display-2 d-block d-md-none  mt-3 mb-3">Últimas entradas</h2>
+                    <h2 class="display-4 d-none d-md-block  mt-3 mb-3">Últimas entradas</h2>
 
                     <!-- Ultimas entradas -->
                     <section class="row mb-3 justify-content-between articles">
@@ -70,7 +54,7 @@
 
                       <?php foreach ($articulos as $articulo): ?>
 
-                        <div class="col-6 mb-3">
+                        <div class="col-sm-12 col-md-12 col-lg-6 mb-3">
   
                             <div class="card ">
   
@@ -122,9 +106,9 @@
 
                     <!-- Pagination -->
                     <div class="row m-2 p-3">
-                      <div class="col-12">
+                      <div class="col">
 
-                      <!--Pagination -->
+                        <!--Pagination -->
                         <nav aria-label="pagination example">
                             <ul class="pagination pagination-lg pagination-circle pg-blue justify-content-center mb-0">
 
@@ -209,10 +193,10 @@
 
 
                   <!-- ASIDE -->                  
-                  <aside class="col-3 mb-3 mr-3">
+                  <aside class="col-sm-12 col-md-12 col-lg-3 mb-3 mr-3">
 
                     <div class="row mb-3">
-                      <div class="col">
+                      <div class="col-12">
                         <div class="card">
                           <div class="card-body">
                               <h3 class="card-title">Título</h3>
@@ -228,7 +212,7 @@
                     </div>
 
                     <div class="row mb-3">
-                      <div class="col">
+                      <div class="col-12">
                         <div class="card">
                           <div class="card-body">
                               <h3 class="card-title">Título</h3>
@@ -241,7 +225,7 @@
                           </div>
                         </div>
                       </div>
-                    </div>
+                    </div>                    
 
                   </aside>
 
@@ -363,7 +347,7 @@
     <script src="js/jquery-3.3.1.min.js"></script>
 
     <!-- popper -->
-    <script src="js/popper.js"></script>
+    <script src="js/popper.min.js"></script>
 
     <!-- Bootstrap -->
     <script src="js/bootstrap.min.js"></script>

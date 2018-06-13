@@ -1,13 +1,11 @@
-<header class="row">
-
-    <div class="col-12">
-
+<header class="">
+    <!-- Barra de navegacion-->
     <div class="row">
 
         <!--Barra de navegación -->
-        <div class="col-12 mt-3">
+        <div class="col-12">
 
-        <!--Main Navigation-->
+            <!--Main Navigation-->
             <nav class="navbar fixed-top navbar-expand-lg navbar-dark unique-color-dark scrolling-navbar">
                 <a class="navbar-brand" href="index.php"><strong>iwebblog</strong></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -60,25 +58,15 @@
 
         </div>
 
-    </div>
+    </div>      
+    
+    <!--Información-->        
+    <div class="row">
 
-    <!--Información-->
-    <div class="row justify-content-center">
-
-        <!-- Información -->
-        <div class="col-12 mx-3 mt-4 p-4 special-color">
-
-        <div>
-            <br>
-            <p class="display-1 text-light">Trabajando en el sitio...</p> <p class="text-light h4">Vuelve pronto</p>
-
-            <br>
+        <div class="col-12 bg-primary">
+            <p class="display-4">Trabajando en el sitio...</p> <p class="text-light h4">Vuelve pronto</p>                                    
         </div>
 
-        </div>
-
-    </div>
-
-    </div>
+    </div>    
 
 </header>
