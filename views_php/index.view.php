@@ -18,23 +18,7 @@
               <div class="col-12">
 
                 <!-- Alert -->
-                <div class="row">
-
-                  <div class="col-12">
-
-                    <div class="alert  primary-color-dark  text-justify text-light">
-
-                        <strong class="h6">Aviso: </strong> La página web está en desarrollo, los aspectos de la misma se modifican constantemente.
-
-                        <button type="button" class="close" data-dismiss="alert" aria-label="Cerrar">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-
-                    </div>                 
-
-                  </div>
-
-                </div>
+                <?php require 'alert.component.php'; ?>
 
                 <!-- Contenedor del main y el aside -->
                 <div class="row d-flex justify-content-around">
@@ -44,149 +28,228 @@
                   <main class="col-sm-12 col-md-12 col-lg-8 mb-3 ml-3">
 
                     <!-- Titular Blog -->
-                    <h2 class="display-2 d-block d-md-none  mt-3 mb-3">Últimas entradas</h2>
-                    <h2 class="display-4 d-none d-md-block  mt-3 mb-3">Últimas entradas</h2>
+                    <h2 class="display-4 d-block d-md-none  mt-3 mb-3">Últimas entradas</h2>
+                    <h2 class="display-2 d-none d-md-block  mt-3 mb-3">Últimas entradas</h2>
 
                     <!-- Ultimas entradas -->
                     <section class="row mb-3 justify-content-between articles">
 
-                      <!-- Entradas dinámicas -->
-
-                      <?php foreach ($articulos as $articulo): ?>
-
-                        <div class="col-sm-12 col-md-12 col-lg-6 mb-3">
-  
-                            <div class="card ">
-  
-                                <!-- Card image -->
-                                <div class="view overlay">
-                                  <img class="card-img-top" src="<?php echo 'img/articulos/' . $articulo['img_principal']; ?>" alt="Card image cap">
-                                  <a href="#!">
-                                    <div class="mask rgba-white-slight"></div>                                
-                                </div>
-  
-                                <!-- Card content -->
-                                <div class="card-body">
-  
-                                  <!-- Title -->
-                                  <h4 class="card-title"><a href="entrada.php?id=<?php echo $articulo['id'] ?>"><?php echo $articulo['titulo'] ?></a></h4>
-                                  <!-- Text -->
-                                  <p class="card-text text-justify"><?php echo $articulo['extracto']?></p>
-                                  <!-- Button -->
-                                  <a class="btn btn-primary btn-block" href="entrada.php?id=<?php echo $articulo['id'] ?>">Ir a la nota</a>
-  
-                                </div>
-  
-                                <div class="card-footer">
-
-                                  <div class="row justify-content-between">
-                                    <div class="col-6">
-                                      <small class="text-muted">
-                                        <?php echo $articulo['id'] ?>
-                                      </small>
+                          <!-- Entradas dinámicas -->
+                          <?php foreach ($articulos as $articulo): ?>
+    
+                            <div class="col-sm-12 col-md-12 col-lg-6 mb-3">
+      
+                                <div class="card ">
+      
+                                    <!-- Card image -->
+                                    <div class="view overlay">
+                                      <img class="card-img-top" src="<?php echo 'img/articulos/' . $articulo['img_principal']; ?>" alt="Card image cap">
+                                      <a href="#!">
+                                        <div class="mask rgba-white-slight"></div>                                
                                     </div>
-                                    <div class="col-3">
-                                      <small class="">
-                                        <p class="text-muted text-right mb-0">
-                                          Fecha
-                                        </p>
-                                      </small>
+      
+                                    <!-- Card content -->
+                                    <div class="card-body">
+      
+                                      <!-- Title -->
+                                      <h4 class="card-title"><a href="entrada.php?id=<?php echo $articulo['id'] ?>"><?php echo $articulo['titulo'] ?></a></h4>
+                                      <!-- Text -->
+                                      <p class="card-text text-justify"><?php echo $articulo['extracto']?></p>
+                                      <!-- Button -->
+                                      <a class="btn btn-primary btn-block" href="entrada.php?id=<?php echo $articulo['id'] ?>">Ir a la nota</a>
+      
                                     </div>
-                                  </div>
-
+      
+                                    <div class="card-footer">
+    
+                                      <div class="row justify-content-between">
+                                        <div class="col-6">
+                                          <small class="text-muted">
+                                            <?php echo $articulo['id'] ?>
+                                          </small>
+                                        </div>
+                                        <div class="col-3">
+                                          <small class="">
+                                            <p class="text-muted text-right mb-0">
+                                              Fecha
+                                            </p>
+                                          </small>
+                                        </div>
+                                      </div>
+    
+                                    </div>
+      
                                 </div>
-  
-                            </div>
-  
-                        </div> 
-
-                      <?php endforeach ?>                                             
+      
+                            </div> 
+    
+                          <?php endforeach ?>                                                                                    
 
                     </section>
 
                     <!-- Pagination -->
                     <div class="row m-2 p-3">
-                      <div class="col">
 
-                        <!--Pagination -->
-                        <nav aria-label="pagination example">
-                            <ul class="pagination pagination-lg pagination-circle pg-blue justify-content-center mb-0">
-
-                                <?php if($pagina == 1): ?>
-
-                                  <!--First-->
-                                  <li class="page-item disabled"><a class="page-link">Primero</a></li>
-
-                                   <!--Arrow left-->
-                                  <li class="page-item disabled">
-                                      <a class="page-link" aria-label="Previous">
-                                          <span aria-hidden="true">&laquo;</span>
-                                          <span class="sr-only">Previous</span>
-                                      </a>
-                                  </li>
-
-                                <?php else: ?>
-
-                                  <!--First-->
-                                  <li class="page-item"><a class="page-link" href="index.php">Primero</a></li>                                                              
-
-                                  <!--Arrow left-->
-                                  <li class="page-item">
-                                      <a class="page-link" aria-label="Previous" href="?pagina=<?php echo $pagina - 1 ?>">
-                                          <span aria-hidden="true">&laquo;</span>
-                                          <span class="sr-only">Previous</span>
-                                      </a>
-                                  </li>
-
-                                <?php endif ?>
-
-                                <?php 
-
-                                for ($i=1; $i <= $numeroPaginas; $i++) {                                                                    
-
-                                  if($pagina == $i){
-                                    echo "<li class='page-item active'><a class='page-link' href='?pagina=$i'>$i</a></li>";
-                                  }else {
-                                    echo "<li class='page-item'><a class='page-link' href='?pagina=$i'>$i</a></li>";
-                                  }
-                                  
-                                }
+                          <div class="col-12">
+  
+                            <!--Pagination -->
+                            <nav aria-label="pagination example">
                                 
-                                ?>
-
-                                <?php if($pagina == $numeroPaginas): ?>
-
-                                <!--Último-->
-                                <li class="page-item disabled"><a class="page-link">Último</a></li>
-
-                                <!--Arrow right-->
-                                <li class="page-item disabled">
-                                    <a class="page-link" aria-label="Next">
-                                        <span aria-hidden="true">&raquo;</span>
-                                        <span class="sr-only">Next</span>
-                                    </a>
-                                </li>
-
-                                <?php else: ?>
-
-                                <!--Arrow right-->
-                                <li class="page-item">
-                                    <a class="page-link" aria-label="Next" href="?pagina= <?php echo $pagina + 1 ?>">
-                                        <span aria-hidden="true">&raquo;</span>
-                                        <span class="sr-only">Next</span>
-                                    </a>
-                                </li>
-
-                                <!--Último-->
-                                <li class="page-item"><a class="page-link" href="?pagina=<?php echo $numeroPaginas ?>">Último</a></li>
+                                <ul class="d-none d-md-flex pagination pagination-lg pagination-circle pg-blue justify-content-center mb-0">
+  
+                                    <?php if($pagina == 1): ?>
+  
+                                      <!--First-->
+                                      <li class="d-none d-md-block page-item disabled"><a class="page-link">Primero</a></li>                                      
+  
+                                      <!--Arrow left-->
+                                      <li class="page-item disabled">
+                                          <a class="page-link" aria-label="Previous">
+                                              <span aria-hidden="true">&laquo;</span>
+                                              <span class="sr-only">Previous</span>
+                                          </a>
+                                      </li>
+  
+                                    <?php else: ?>
+  
+                                      <!--First-->
+                                      <li class="d-none d-md-block page-item disabled"><a class="page-link">Primero</a></li>                                      
+  
+                                      <!--Arrow left-->
+                                      <li class="page-item">
+                                          <a class="page-link" aria-label="Previous" href="?pagina=<?php echo $pagina - 1 ?>">
+                                              <span aria-hidden="true">&laquo;</span>
+                                              <span class="sr-only">Previous</span>
+                                          </a>
+                                      </li>
+  
+                                    <?php endif ?>
+  
+                                    <?php 
+  
+                                      for ($i=1; $i <= $numeroPaginas; $i++) {                                                                    
+    
+                                        if($pagina == $i){
+                                          echo "<li class='page-item active'><a class='page-link' href='?pagina=$i'>$i</a></li>";
+                                        }else {
+                                          echo "<li class='page-item'><a class='page-link' href='?pagina=$i'>$i</a></li>";
+                                        }
+                                        
+                                      }
+                                    
+                                    ?>
+  
+                                    <?php if($pagina == $numeroPaginas): ?>
+  
+                                      <!--Último-->
+                                      <li class="d-none d-md-block page-item disabled"><a class="page-link">Último</a></li>
+    
+                                      <!--Arrow right-->
+                                      <li class="page-item disabled">
+                                          <a class="page-link" aria-label="Next">
+                                              <span aria-hidden="true">&raquo;</span>
+                                              <span class="sr-only">Next</span>
+                                          </a>
+                                      </li>
+  
+                                    <?php else: ?>
+  
+                                      <!--Arrow right-->
+                                      <li class="page-item">
+                                          <a class="page-link" aria-label="Next" href="?pagina= <?php echo $pagina + 1 ?>">
+                                              <span aria-hidden="true">&raquo;</span>
+                                              <span class="sr-only">Next</span>
+                                          </a>
+                                      </li>
+    
+                                      <!--Último-->
+                                      <li class="d-none d-md-block page-item disabled"><a class="page-link">Último</a></li>
+                                    
+  
+                                    <?php endif ?>                                                                               
+  
+                                </ul>
                                 
+                                
+                                <ul class="d-flex d-md-none pagination pagination-circle pg-blue justify-content-center mb-0">
+  
+                                    <?php if($pagina == 1): ?>
+  
+                                      <!--First-->
+                                      <li class="d-none d-md-block page-item disabled"><a class="page-link">Primero</a></li>                                      
+  
+                                      <!--Arrow left-->
+                                      <li class="page-item disabled">
+                                          <a class="page-link" aria-label="Previous">
+                                              <span aria-hidden="true">&laquo;</span>
+                                              <span class="sr-only">Previous</span>
+                                          </a>
+                                      </li>
+  
+                                    <?php else: ?>
+  
+                                      <!--First-->
+                                      <li class="d-none d-md-block page-item disabled"><a class="page-link">Primero</a></li>                                      
+  
+                                      <!--Arrow left-->
+                                      <li class="page-item">
+                                          <a class="page-link" aria-label="Previous" href="?pagina=<?php echo $pagina - 1 ?>">
+                                              <span aria-hidden="true">&laquo;</span>
+                                              <span class="sr-only">Previous</span>
+                                          </a>
+                                      </li>
+  
+                                    <?php endif ?>
+  
+                                    <?php 
+  
+                                      for ($i=1; $i <= $numeroPaginas; $i++) {                                                                    
+    
+                                        if($pagina == $i){
+                                          echo "<li class='page-item active'><a class='page-link' href='?pagina=$i'>$i</a></li>";
+                                        }else {
+                                          echo "<li class='page-item'><a class='page-link' href='?pagina=$i'>$i</a></li>";
+                                        }
+                                        
+                                      }
+                                    
+                                    ?>
+  
+                                    <?php if($pagina == $numeroPaginas): ?>
+  
+                                      <!--Último-->
+                                      <li class="d-none d-md-block page-item disabled"><a class="page-link">Último</a></li>
+    
+                                      <!--Arrow right-->
+                                      <li class="page-item disabled">
+                                          <a class="page-link" aria-label="Next">
+                                              <span aria-hidden="true">&raquo;</span>
+                                              <span class="sr-only">Next</span>
+                                          </a>
+                                      </li>
+  
+                                    <?php else: ?>
+  
+                                      <!--Arrow right-->
+                                      <li class="page-item">
+                                          <a class="page-link" aria-label="Next" href="?pagina= <?php echo $pagina + 1 ?>">
+                                              <span aria-hidden="true">&raquo;</span>
+                                              <span class="sr-only">Next</span>
+                                          </a>
+                                      </li>
+    
+                                      <!--Último-->
+                                      <li class="d-none d-md-block page-item disabled"><a class="page-link">Último</a></li>
+                                    
+  
+                                    <?php endif ?>                                                                               
+  
+                                </ul>
 
-                                <?php endif ?>                                                                               
+                            </nav>
+                          
+                          </div>
 
-                            </ul>
-                        </nav>
-                      
-                      </div>
                     </div>
 
                   </main>
