@@ -25,7 +25,7 @@
 
                   <!-- MAIN -->
                   <!-- Grupo de cartas para mostrar las entradas -->
-                  <main class="col-sm-12 col-md-12 col-lg-8 mb-3 ml-3">
+                  <main class="col-sm-12 col-md-12 col-lg-8 ">
 
                     <!-- Titular Blog -->
                     <h2 class="display-4 d-block d-md-none  mt-3 mb-3">Últimas entradas</h2>
@@ -256,7 +256,7 @@
 
 
                   <!-- ASIDE -->                  
-                  <aside class="col-sm-12 col-md-12 col-lg-3 mb-3 mr-3">
+                  <aside class="col-sm-12 col-md-12 col-lg-3 ">
 
                     <div class="row mb-3">
                       <div class="col-12">
