@@ -58,7 +58,7 @@
                         <div class="row justify-content-around">
 
                             <!-- MAIN -->                  
-                            <div class="col-8 mb-3 ml-3">
+                            <main class="col-sm-12 col-md-12 col-lg-8">
 
                                     <!-- Modal iniciar sesión -->
                                     <div class="modal fade" id="modalIniciarSesion" tabindex="-1" role="dialog" aria-labelledby="modalIniciarSesion" aria-hidden="true">
@@ -98,33 +98,39 @@
 
                                         <!-- Entrada -->
                                         <!-- Card -->
-                                        <div class="col-12 card card-cascade wider reverse">
+                                        <div class="col-12 jumbotron text-center">
+
+                                            <!-- Title -->
+                                            <h1 class="card-title"><strong><?php echo $entrada['titulo']; ?></strong></h1>
 
                                             <!-- Card image -->
-                                            <div class="view view-cascade overlay">
-                                            <img class="card-img-top" src="<?php echo 'img/articulos/' . $entrada['img_principal']; ?>" alt="Card image cap">
-                                            <a href="#!">
-                                                <div class="mask rgba-white-slight"></div>
-                                            </a>
+                                            <div class="view overlay my-4">
+                                                <img class="img-fluid" src="<?php echo 'img/articulos/' . $entrada['img_principal']; ?>" alt="">
+                                                <a href="#!">
+                                                    <div class="mask rgba-white-slight"></div>
+                                                </a>
                                             </div>
 
                                             <!-- Card content -->
                                             <div class="card-body card-body-cascade text-center">
-
-                                            <!-- Title -->
-                                            <h4 class="card-title"><strong><?php echo $entrada['titulo']; ?></strong></h4>
-                                            <!-- Subtitle -->
-                                            <!-- TODO: Cambiar por etiquetas -->
-                                            <h6 class="font-weight-bold indigo-text py-2"><?php echo $entrada['titulo']; ?></h6>
-                                            <!-- Text -->
-                                            <p class="card-text"><?php echo $entrada['nota']; ?></p>
+                                            
+                                            <!-- Subtitle -->                                                                                       
+                                            <?php if (isset($entrada['subtitulo'])) {
+                                                echo '<h6 class="font-weight-bold indigo-text py-2">'
+                                                .$entrada['subtitulo']
+                                                .'</h6>';
+                                            }
+                                            ?>                                            
+                                                                                        
+                                            <!-- Nota -->
+                                            <p class="card-text text-justify"><?php echo $entrada['nota']; ?></p>
 
                                             <!-- Facebook -->
-                                            <a class="px-2 fa-lg li-ic"><i class="fa fa-linkedin"></i></a>
+                                            <a class="px-2 fa-lg li-ic"><i class="fab fa-linkedin"></i></a>
                                             <!-- Twitter -->
-                                            <a class="px-2 fa-lg tw-ic"><i class="fa fa-twitter"></i></a>
+                                            <a class="px-2 fa-lg tw-ic"><i class="fab fa-twitter"></i></a>
                                             <!-- Youtube -->
-                                            <a class="px-2 fa-lg fb-ic"><i class="fa fa-facebook"></i></a>
+                                            <a class="px-2 fa-lg fb-ic"><i class="fab fa-facebook"></i></a>
 
                                             </div>
 
@@ -133,11 +139,11 @@
 
                                     </main>                                        
 
-                            </div>
+                            </main>
 
 
                             <!-- ASIDE -->            
-                            <aside class="col-3 mb-3 mr-3">
+                            <aside class="col-sm-12 col-md-12 col-lg-3">
 
                                 <div class="row mb-3">
                                 <div class="col">

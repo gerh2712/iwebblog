@@ -75,7 +75,7 @@
                                         <div class="md-form mb-5">
                                             <i class="fa fa-envelope prefix grey-text"></i>
                                             <input type="text" id="defaultForm-email" class="form-control validate" name="usuario_login">
-                                            <label data-error="wrong" data-success="right" for="defaultForm-email">Usuario o email</label>
+                                            <label data-error="wrong" data-success="right" for="defaultForm-email">Tu email</label>
                                         </div>
 
                                         <div class="md-form mb-4">
