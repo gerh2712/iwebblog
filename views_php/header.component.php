@@ -12,7 +12,10 @@
                     <li class="nav-item active">
                         <a class="nav-link" href="#blog">Blog <span class="sr-only">(current)</span></a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item disabled">
+                        <a class="nav-link disabled" disabled href="#youtube">Próximamente...</a>
+                    </li>
+                    <!--<li class="nav-item">
                         <a class="nav-link" href="views_php/entrada.view.php">Cursos</a>
                     </li>
                     <li class="nav-item">
@@ -20,7 +23,7 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#about">Sobre Nosotros</a>
-                    </li>
+                    </li>-->
                 </ul>
     
                 <?php 

@@ -122,19 +122,19 @@
                 <div class="row my-4 py-3 align-center">
                     <div class="col m-2">
                         <a href="" class="d-block d-md-none text-center m-2 pb-4"><i class="fab fa-facebook-f fa-2x text-light hoverable"></i></a>
-                        <a href=""><i class="fab fa-facebook-f fa-2x text-light d-none d-md-block hoverable"></i></a>
+                        <a href="" class="d-none d-md-block text-center m-2 pb-4"><i class="fab fa-facebook-f fa-2x text-light hoverable"></i></a>                        
                     </div>
                     <div class="col m-2">
                         <a href="" class="d-block d-md-none text-center m-2 pb-4"><i class="fab fa-twitter fa-2x text-light hoverable" aria-hidden="true"></i></a>
-                        <a href=""><i class="fab fa-twitter fa-2x text-light d-none d-md-block hoverable" aria-hidden="true"></i></a>
+                        <a href="" class="d-none d-md-block text-center m-2 pb-4"><i class="fab fa-twitter fa-2x text-light hoverable" aria-hidden="true"></i></a>
                     </div>
                     <div class="col m-2">
                         <a href="" class="d-block d-md-none text-center m-2 pb-4"><i class="fab fa-youtube fa-2x text-light hoverable" aria-hidden="true"></i></a>
-                        <a href=""><i class="fab fa-youtube fa-2x text-light d-none d-md-block hoverable" aria-hidden="true"></i></a>
+                        <a href="" class="d-none d-md-block text-center m-2 pb-4"><i class="fab fa-youtube fa-2x text-light hoverable" aria-hidden="true"></i></a>
                     </div>
                     <div class="col m-2">
                         <a href="" class="d-block d-md-none text-center m-2 pb-4"><i class="fab fa-github-square fa-2x text-light hoverable" aria-hidden="true"></i></a>
-                        <a href=""><i class="fab fa-github-square fa-2x text-light d-none d-md-block hoverable" aria-hidden="true"></i></a>
+                        <a href="" class="d-none d-md-block text-center m-2 pb-4"><i class="fab fa-github-square fa-2x text-light hoverable" aria-hidden="true"></i></a>
                     </div>
                 </div>
 
