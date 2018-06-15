@@ -1,17 +1,5 @@
-<!DOCTYPE html>
-<html lang="es">
-
-<?php require 'head.component.php'; ?>
-
-<body style="background: #f2f2f2;">
-    <div class="container-fluid">
-
-        <!-- Aquí va todo -->
-        <div class="row">
-          <div class="col-12">
-
-            <!-- Header -->
-            <?php require 'header.component.php'; ?>    
+<!-- get_header.php -->
+<?php get_header(); ?>
 
             <!-- Contenido principal -->
             <section class="row mt-3 py-2 px-0">
@@ -35,60 +23,107 @@
                     <section class="row mb-3 justify-content-between articles">
 
                           <!-- Entradas dinámicas -->
-                          <?php foreach ($articulos as $articulo): ?>
-    
+                          <?php if (have_posts()) : while(have_posts()) : the_post() ; ?>
                             <div class="col-sm-12 col-md-12 col-lg-6 mb-3">
-      
-                                <div class="card ">
-      
-                                    <!-- Card image -->
-                                    <div class="view overlay">
-                                      <img class="card-img-top" src="<?php echo 'img/articulos/' . $articulo['img_principal']; ?>" alt="Card image cap">
-                                      <a href="#!">
-                                        <div class="mask rgba-white-slight"></div>                                
-                                    </div>
-      
-                                    <!-- Card content -->
-                                    <div class="card-body">
-      
-                                      <!-- Title -->
-                                      <h4 class="card-title"><a href="entrada.php?id=<?php echo $articulo['id'] ?>"><?php echo $articulo['titulo'] ?></a></h4>
-                                      <!-- Text -->
-                                      <p class="card-text text-justify"><?php echo $articulo['extracto']?></p>
-                                      <!-- Button -->
-                                      <a class="btn btn-primary btn-block" href="entrada.php?id=<?php echo $articulo['id'] ?>">Ir a la nota</a>
-      
-                                    </div>
-      
-                                    <div class="card-footer">
+        
+                              <article class="card ">
     
-                                      <div class="row justify-content-between">
-                                        <div class="col-6">
-                                          <small class="text-muted">
-                                            <?php echo $articulo['id'] ?>
-                                          </small>
-                                        </div>
-                                        <div class="col-3">
-                                          <small class="">
-                                            <p class="text-muted text-right mb-0">
-                                              Fecha
-                                            </p>
-                                          </small>
-                                        </div>
+                                  <!-- Card image -->
+                                  <div class="view overlay">                                     
+                                    <span class="card-img-top" alt="Card image cap" max-height="00">
+                                      <?php if(has_post_thumbnail()) {the_post_thumbnail('homepage-thumb');} ?>
+                                    </span>
+                                    <a href="#!">
+                                      <div class="mask rgba-white-slight"></div>                                
+                                  </div> 
+    
+                                  <!-- Card content -->
+                                  <div class="card-body">
+    
+                                    <!-- Title -->
+                                    <h4 class="card-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
+                                    <!-- Text -->
+                                    <div class="card-text text-justify"><?php echo the_excerpt(); ?></div>
+                                    <!-- Button -->
+                                    <a class="btn btn-primary btn-block" href="<?php the_permalink(); ?>">Ir a la nota</a>
+    
+                                  </div>
+    
+                                  <div class="card-footer">
+
+                                    <div class="row justify-content-between">
+                                      <div class="col-6">
+
+                                        <small class="">
+                                          <?php the_category(); ?>
+                                        </small>
+
                                       </div>
-    
+
+                                      <div class="col-3">
+                                        <small class="">
+                                          <p class="text-muted text-right mb-0">
+                                            <?php echo get_the_date(); ?>
+                                          </p>
+                                        </small>
+                                      </div>
+
                                     </div>
-      
-                                </div>
-      
-                            </div> 
+
+                                  </div>
     
-                          <?php endforeach ?>                                                                                    
+                              </article>
+    
+                            </div> 
+                          <?php  endwhile; else : ?>
+                            <article class="card ">                                  
+      
+                              <!-- Card content -->
+                              <div class="card-body">
+
+                                <!-- Title -->
+                                <h4 class="card-title">No hay articulos aún</h4>
+                                <!-- Text -->
+                                <div class="card-text text-justify">Por el momento no hay articulos para mostrar, prueba a recargar la página o espera que publiquemos algo nuevo</div>
+                                <!-- Button -->
+                                <a class="btn btn-primary btn-block disabled" disabled href="#">Ir a la nota</a>
+
+                              </div>
+
+                              <div class="card-footer">
+
+                                <div class="row justify-content-between">
+                                  <div class="col-6">
+
+                                    <small class="">
+                                      Articulo inexistente
+                                    </small>
+
+                                  </div>
+
+                                  <div class="col-3">
+                                    <small class="">
+                                      <p class="text-muted text-right mb-0">
+                                        Gracias por tu comprensión
+                                      </p>
+                                    </small>
+                                  </div>
+
+                                </div>
+
+                              </div>
+      
+                            </article>
+                          <?php endif; ?>                                                                                                                                        
 
                     </section>
 
                     <!-- Pagination -->
                     <div class="row m-2 p-3">
+
+                        <div class="col-12">
+                          <?php wp_pagenavi(); ?>
+                        </div>                        
 
                           <div class="col-12">
   
@@ -256,7 +291,7 @@
 
 
                   <!-- ASIDE -->                  
-                  <?php require 'aside.component.php'; ?>
+                  <?php get_sidebar(); ?>
 
                 </div>
 
@@ -365,24 +400,4 @@
             </section>
 
             <!-- Contenedor del footer -->
-            <?php require 'footer.component.php'; ?>
-
-          </div>
-        </div>
-
-    </div>
-
-    <!-- JQuery -->
-    <script src="js/jquery-3.3.1.min.js"></script>
-
-    <!-- popper -->
-    <script src="js/popper.min.js"></script>
-
-    <!-- Bootstrap -->
-    <script src="js/bootstrap.min.js"></script>
-
-    <!-- MDB core JavaScript -->
-    <script type="text/javascript" src="js/mdb.min.js"></script>
-</body>
-
-</html>
+            <?php get_footer(); ?>
