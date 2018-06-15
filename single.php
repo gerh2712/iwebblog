@@ -8,6 +8,10 @@
 //--Session
 session_start();
     
+
+
+
+
     // requires
     
     //Validacion del contacto en la página principal

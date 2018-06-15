@@ -35,44 +35,92 @@
 
                                         <!-- Entrada -->
                                         <!-- Card -->
+                                    <!--
+                                        
+                                    -->
+
+                                     <?php if (have_posts()) : while(have_posts()) : the_post() ; ?>
+
                                         <div class="col-12 jumbotron text-center">
 
-                                            <!-- Title -->
-                                            <h1 class="card-title"><strong><?php echo $entrada['titulo']; ?></strong></h1>
+                                            
+                                            <h1 class="card-title"><strong><?php  the_title(); ?></strong></h1>
 
-                                            <!-- Card image -->
-                                            <div class="view overlay my-4">
-                                                <img class="img-fluid mh-50 mw-100" src="<?php echo 'img/articulos/' . $entrada['img_principal']; ?>" alt="">
+
+                                            <div class="view overlay my-4">                                                
+                                                <span class="img-fluid mh-50 mw-100" alt="Card image cap" max-height="500">
+                                                <?php if(has_post_thumbnail()) {the_post_thumbnail('homepage-thumb');} ?>
+                                                </span>
                                                 <a href="#!">
                                                     <div class="mask rgba-white-slight"></div>
                                                 </a>
                                             </div>
 
-                                            <!-- Card content -->
-                                            <div class="card-body card-body-cascade text-center">
-                                            
-                                            <!-- Subtitle -->                                                                                       
-                                            <?php if (isset($entrada['subtitulo'])) {
-                                                echo '<h6 class="font-weight-bold indigo-text py-2">'
-                                                .$entrada['subtitulo']
-                                                .'</h6>';
-                                            }
-                                            ?>                                            
-                                                                                        
-                                            <!-- Nota -->
-                                            <p class="card-text text-justify"><?php echo $entrada['nota']; ?></p>
 
-                                            <!-- Facebook -->
+                                            <div class="card-body card-body-cascade text-center">
+
+                                                                                                                                
+                                            <div>
+                                                <?php  echo get_the_date();?>  
+                                                <?php  the_category();?>  
+                                            </div>                                          
+                                                                                        
+
+                                            <div class="card-text text-justify">
+                                                <?php  echo the_content(); ?>
+                                            </div>
+
+
                                             <a class="px-2 fa-lg li-ic"><i class="fab fa-linkedin"></i></a>
-                                            <!-- Twitter -->
+
                                             <a class="px-2 fa-lg tw-ic"><i class="fab fa-twitter"></i></a>
-                                            <!-- Youtube -->
+
                                             <a class="px-2 fa-lg fb-ic"><i class="fab fa-facebook"></i></a>
 
                                             </div>
 
+                                            </div>
+
+                                    <?php  endwhile; else : ?>
+                                        <article class="card ">                                  
+                
+                                        <!-- Card content -->
+                                        <div class="card-body">
+
+                                            <!-- Title -->
+                                            <h4 class="card-title">No hay articulos aún</h4>
+                                            <!-- Text -->
+                                            <div class="card-text text-justify">Por el momento no hay articulos para mostrar, prueba a recargar la página o espera que publiquemos algo nuevo</div>
+                                            <!-- Button -->
+                                            <a class="btn btn-primary btn-block disabled" disabled href="#">Ir a la nota</a>
+
                                         </div>
-                                
+
+                                        <div class="card-footer">
+
+                                            <div class="row justify-content-between">
+                                            <div class="col-6">
+
+                                                <small class="">
+                                                Articulo inexistente
+                                                </small>
+
+                                            </div>
+
+                                            <div class="col-3">
+                                                <small class="">
+                                                <p class="text-muted text-right mb-0">
+                                                    Gracias por tu comprensión
+                                                </p>
+                                                </small>
+                                            </div>
+
+                                            </div>
+
+                                        </div>
+                
+                                        </article>
+                                    <?php endif; ?>    
 
                                     </main>                                        
 

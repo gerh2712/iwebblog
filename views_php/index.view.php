@@ -30,9 +30,9 @@
     
                                   <!-- Card image -->
                                   <div class="view overlay">                                     
-                                    <span class="card-img-top" alt="Card image cap" max-height="500">
+                                    <span class="card-img-top" alt="Card image cap" max-height="00">
                                       <?php if(has_post_thumbnail()) {the_post_thumbnail('homepage-thumb');} ?>
-                                    </p0a
+                                    </span>
                                     <a href="#!">
                                       <div class="mask rgba-white-slight"></div>                                
                                   </div> 
