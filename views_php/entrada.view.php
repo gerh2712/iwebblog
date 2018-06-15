@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -53,15 +53,8 @@
                             </div>
 
                         </div>
-
-                        <!-- Contenedor del main y el aside -->
-                        <div class="row justify-content-around">
-
-                            <!-- MAIN -->                  
-                            <main class="col-sm-12 col-md-12 col-lg-8">
-
-                                    <!-- Modal iniciar sesión -->
-                                    <div class="modal fade" id="modalIniciarSesion" tabindex="-1" role="dialog" aria-labelledby="modalIniciarSesion" aria-hidden="true">
+                         <!-- Modal iniciar sesión -->
+                         <div class="modal fade" id="modalIniciarSesion" tabindex="-1" role="dialog" aria-labelledby="modalIniciarSesion" aria-hidden="true">
                                         <div class="modal-dialog" role="document">
                                             <div class="modal-content">
                                                 <div class="modal-header text-center">
@@ -91,7 +84,13 @@
                                                 </form>
                                             </div>
                                         </div>
-                                    </div>                  
+                                    </div>  
+
+                        <!-- Contenedor del main y el aside -->
+                        <div class="row justify-content-around">
+
+                            <!-- MAIN -->                  
+                            <div class="col-sm-12 col-md-12 col-lg-8">                                                   
 
                                     <!-- Entrada del artículo -->
                                     <main class="row mb-3 justify-content-between articles">                           
@@ -139,7 +138,7 @@
 
                                     </main>                                        
 
-                            </main>
+                            </div>
 
 
                             <!-- ASIDE -->            

@@ -3,7 +3,7 @@
     <div class="col-12 p-0">
         <!-- Barra de navegacion -->
         <nav class="navbar navbar-expand-lg navbar-dark unique-color-dark scrolling-navbar">
-            <a class="navbar-brand" href="index.php"><strong>iwebblog</strong></a>
+            <a class="navbar-brand" href="<?php bloginfo('url')?>"><strong>iwebblog</strong></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
