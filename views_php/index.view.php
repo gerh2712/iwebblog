@@ -1,17 +1,5 @@
-<!DOCTYPE html>
-<html lang="es">
-
-<?php require 'head.component.php'; ?>
-
-<body style="background: #f2f2f2;">
-    <div class="container-fluid">
-
-        <!-- Aquí va todo -->
-        <div class="row">
-          <div class="col-12">
-
-            <!-- Header -->
-            <?php require 'header.component.php'; ?>    
+<!-- get_header.php -->
+<?php get_header(); ?>
 
             <!-- Contenido principal -->
             <section class="row mt-3 py-2 px-0">
@@ -303,7 +291,7 @@
 
 
                   <!-- ASIDE -->                  
-                  <?php require 'aside.component.php'; ?>
+                  <?php get_sidebar(); ?>
 
                 </div>
 
@@ -412,24 +400,4 @@
             </section>
 
             <!-- Contenedor del footer -->
-            <?php require 'footer.component.php'; ?>
-
-          </div>
-        </div>
-
-    </div>
-
-    <!-- JQuery -->
-    <script src="<?php bloginfo('template_url') ?>/js/jquery-3.3.1.min.js"></script>
-
-    <!-- popper -->
-    <script src="<?php bloginfo('template_url') ?>/js/popper.min.js"></script>
-
-    <!-- Bootstrap -->
-    <script src="<?php bloginfo('template_url') ?>/js/bootstrap.min.js"></script>
-
-    <!-- MDB core JavaScript -->
-    <script type="text/javascript" src=">js/mdb.min.js"></script>
-</body>
-
-</html>
+            <?php get_footer(); ?>

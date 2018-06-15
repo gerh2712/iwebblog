@@ -11,17 +11,15 @@ session_start();
     // requires
     
     //Validacion del contacto en la página principal
-    require 'php/validacion_contacto.php';
-
-    //Paginación y obtención de los artículos en la página principal
-    require 'php/paginacion_articulos_index.php';
+    require 'php/validacion_contacto.php';    
 
     //Vista principal
     
-    require 'views_php/index.view.php';
+    require 'views_php/entrada.view.php';
 
 
 
 
 
 ?>
+
