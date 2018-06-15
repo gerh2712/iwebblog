@@ -26,7 +26,7 @@
             }
         ?>
     </title>
-    <?php wp_head(); ?>
+    <?php //wp_head(); ?>
 </head>
 
 <body style="background: #f2f2f2;">
@@ -48,14 +48,14 @@
                           <span class="navbar-toggler-icon"></span>
                       </button>
                       <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                          <ul class="navbar-nav mr-auto">
+                          <!--<ul class="navbar-nav mr-auto">
                               <li class="nav-item active">
                                   <a class="nav-link" href="#blog">Blog <span class="sr-only">(current)</span></a>
                               </li>
                               <li class="nav-item disabled">
                                   <a class="nav-link disabled" disabled href="#youtube">Próximamente...</a>
                               </li>
-                              <!--<li class="nav-item">
+                              <li class="nav-item">
                                   <a class="nav-link" href="views_php/entrada.view.php">Cursos</a>
                               </li>
                               <li class="nav-item">
@@ -63,8 +63,17 @@
                               </li>
                               <li class="nav-item">
                                   <a class="nav-link" href="#about">Sobre Nosotros</a>
-                              </li>-->
-                          </ul>
+                              </li>
+                          </ul>-->
+                        <!-- FIXME: Clase en la etiqueta a -->
+                          <?php 
+                            wp_nav_menu(array(
+                                'container'=>false,
+                                'menu_class'=>'nav-item',
+                                'items_wrap'=>'<ul class="navbar-nav mr-auto">%3$s</ul>',
+                                'theme_location'=>'menu-top'
+                            ))
+                          ?>
               
                           <?php 
                           
