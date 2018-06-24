@@ -73,6 +73,7 @@
                                 'items_wrap'=>'<ul class="navbar-nav mr-auto">%3$s</ul>',
                                 'theme_location'=>'menu-top'
                             ))
+                            //wp_list_pages('title_li=')
                           ?>
               
                           <?php 
@@ -92,7 +93,7 @@
               
                                   "<ul class='navbar-nav nav-flex-icons'>                                   
                                       <li class='nav-item'>
-                                      <button type='button' class='btn btn-primary' data-toggle='modal' data-target='#modalIniciarSesion'>Iniciar Sesión</button>
+                                      <button type='button' class='btn btn-primary disabled' disabled data-toggle='modal' data-target='#modalIniciarSesion'>Iniciar Sesión</button>
                                       </li>
                                   </ul>"
                               ;

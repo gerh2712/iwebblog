@@ -4,7 +4,6 @@
             <!-- Contenido principal -->
             <section class="row mt-3 py-2 px-0">
               <div class="col-12">
-
                 <!-- Alert -->
                 <?php require 'alert.component.php'; ?>
 

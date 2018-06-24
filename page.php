@@ -61,12 +61,12 @@
 
                                                                                                                                 
                                             <div>
-                                                <?php  echo get_the_date();?>  
-                                                <?php  the_category();?>  
+                                                <span class="m-3 p-3"><?php  echo get_the_date();?>  </span>
+                                                <span class="m-3 p-3"><?php  the_category();?>  </span>
                                             </div>                                          
                                                                                         
 
-                                            <div class="card-text text-justify">
+                                            <div class="card-text text-justify m-3 p-2">
                                                 <?php  echo the_content(); ?>
                                             </div>
 
