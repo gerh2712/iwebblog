@@ -8,6 +8,9 @@
 //--Session
 session_start();
     
+
+
+if (isset($_SESSION['usuario'])) {
     // requires
     
     //Validacion del contacto en la página principal
@@ -19,8 +22,10 @@ session_start();
     //Vista principal
     
     require 'views_php/index.view.php';
-
-
+}else {
+    $ruta = bloginfo('url');    
+    header("Location: http://localhost/APPS/wordpress/registrarse/");
+}
 
 
 
