@@ -9,8 +9,8 @@
 session_start();
     
 
-
-if (isset($_SESSION['usuario'])) {
+//Trabajando con la protección del contenido
+if (/*isset($_SESSION['usuario'])*/ true) {
     // requires
     
     //Validacion del contacto en la página principal
@@ -23,8 +23,10 @@ if (isset($_SESSION['usuario'])) {
     
     require 'views_php/index.view.php';
 }else {
-    $ruta = bloginfo('url');    
-    header("Location: http://localhost/APPS/wordpress/registrarse/");
+    
+    //header("Location: http://localhost/APPS/wordpress/registrarse/");
+    header("Location:  localhost/APPS/wordpress/wp-content/themes/iwb/registrarse.php");
+    
 }
 
 

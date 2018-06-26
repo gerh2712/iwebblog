@@ -140,24 +140,4 @@
             
 
             <!-- Contenedor del footer -->
-            <?php require 'footer.component.php'; ?>
-
-          </div>
-        </div>
-
-    </div>
-
-    <!-- JQuery -->
-    <script src="js/jquery-3.3.1.min.js"></script>
-
-    <!-- popper -->
-    <script src="js/popper.js"></script>
-
-    <!-- Bootstrap -->
-    <script src="js/bootstrap.min.js"></script>
-
-    <!-- MDB core JavaScript -->
-    <script type="text/javascript" src="js/mdb.min.js"></script>
-</body>
-
-</html>
+            <?php get_footer(); ?>
